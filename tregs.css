@@ -107,9 +107,17 @@ body{
 .title{
 	font-weight:bold;
 	font-size:1.5em;
-	letter-spacing:0.2em;
+	letter-spacing:0.0em;
 	color:#000;
 	margin-bottom: 1em;
+}
+
+.subtitle{
+	font-weight:bold;
+	font-size:1.3em;
+	letter-spacing:0.0em;
+	color:#000;
+	margin-bottom: 0em;
 }
 
 a{
