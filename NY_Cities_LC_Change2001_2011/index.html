@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css" />
+        <link rel="stylesheet" type="text/css" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/MarkerCluster.css" />
+        <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet-heat.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/OSMBuildings-Leaflet.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/leaflet-tilelayer-wmts.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/leaflet.markercluster.js"></script>
+        <script src="data/PercentImperviousGain0.js"></script>
+        <script src="data/TreeCanopyLossNegativeindicatestreecanopygain1.js"></script>
+        <script src="data/Citieswith50000ppl2.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+        }
+        L.ImageOverlay.include({
+            getBounds: function () {
+                return this._bounds;
+            }
+        });
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[41.3308409995,-80.2879510693],[43.8419305002,-70.3385971627]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        var bounds_group = new L.featureGroup([]);
+        var basemap0 = L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Mapdata: &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 28
+        });
+        basemap0.addTo(map);
+        function setBounds() {
+        }
+        function geoJson2heat(geojson, weight) {
+          return geojson.features.map(function(feature) {
+            return [
+              feature.geometry.coordinates[1],
+              feature.geometry.coordinates[0],
+              feature.properties[weight]
+            ];
+          });
+        }
+        function pop_PercentImperviousGain0(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    layer.setStyle(style_PercentImperviousGain0(feature));
+
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">NAME</th>\
+                        <td>' + (feature.properties['NAME'] !== null ? Autolinker.link(String(feature.properties['NAME'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CnpyLss</th>\
+                        <td>' + (feature.properties['CnpyLss'] !== null ? Autolinker.link(String(feature.properties['CnpyLss'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">ImprvGn</th>\
+                        <td>' + (feature.properties['ImprvGn'] !== null ? Autolinker.link(String(feature.properties['ImprvGn'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">PpDnsty</th>\
+                        <td>' + (feature.properties['PpDnsty'] !== null ? Autolinker.link(String(feature.properties['PpDnsty'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_PercentImperviousGain0(feature) {
+            if (feature.properties['ImprvGn'] >= 0.000000 && feature.properties['ImprvGn'] <= 0.346373 ) {
+                return {
+                pane: 'pane_PercentImperviousGain0',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(250,250,250,1.0)',
+            }
+            }
+            if (feature.properties['ImprvGn'] >= 0.346373 && feature.properties['ImprvGn'] <= 1.043521 ) {
+                return {
+                pane: 'pane_PercentImperviousGain0',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(189,189,189,1.0)',
+            }
+            }
+            if (feature.properties['ImprvGn'] >= 1.043521 && feature.properties['ImprvGn'] <= 2.028886 ) {
+                return {
+                pane: 'pane_PercentImperviousGain0',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(128,128,128,1.0)',
+            }
+            }
+            if (feature.properties['ImprvGn'] >= 2.028886 && feature.properties['ImprvGn'] <= 5.016905 ) {
+                return {
+                pane: 'pane_PercentImperviousGain0',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(66,66,66,1.0)',
+            }
+            }
+            if (feature.properties['ImprvGn'] >= 5.016905 && feature.properties['ImprvGn'] <= 11.657363 ) {
+                return {
+                pane: 'pane_PercentImperviousGain0',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(5,5,5,1.0)',
+            }
+            }
+        }
+        map.createPane('pane_PercentImperviousGain0');
+        map.getPane('pane_PercentImperviousGain0').style.zIndex = 600;
+        map.getPane('pane_PercentImperviousGain0').style['mix-blend-mode'] = 'normal';
+    var layer_PercentImperviousGain0 = new L.geoJson(json_PercentImperviousGain0, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_PercentImperviousGain0',
+        onEachFeature: pop_PercentImperviousGain0,
+        style: style_PercentImperviousGain0
+    });
+        bounds_group.addLayer(layer_PercentImperviousGain0);
+        map.addLayer(layer_PercentImperviousGain0);
+        function pop_TreeCanopyLossNegativeindicatestreecanopygain1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    layer.setStyle(style_TreeCanopyLossNegativeindicatestreecanopygain1(feature));
+
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">NAME</th>\
+                        <td>' + (feature.properties['NAME'] !== null ? Autolinker.link(String(feature.properties['NAME'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CnpyLss</th>\
+                        <td>' + (feature.properties['CnpyLss'] !== null ? Autolinker.link(String(feature.properties['CnpyLss'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">ImprvGn</th>\
+                        <td>' + (feature.properties['ImprvGn'] !== null ? Autolinker.link(String(feature.properties['ImprvGn'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">PpDnsty</th>\
+                        <td>' + (feature.properties['PpDnsty'] !== null ? Autolinker.link(String(feature.properties['PpDnsty'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_TreeCanopyLossNegativeindicatestreecanopygain1(feature) {
+            if (feature.properties['CnpyLss'] >= -21.611447 && feature.properties['CnpyLss'] <= -13.539246 ) {
+                return {
+                pane: 'pane_TreeCanopyLossNegativeindicatestreecanopygain1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(77,172,38,1.0)',
+            }
+            }
+            if (feature.properties['CnpyLss'] >= -13.539246 && feature.properties['CnpyLss'] <= -5.467045 ) {
+                return {
+                pane: 'pane_TreeCanopyLossNegativeindicatestreecanopygain1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(184,225,134,1.0)',
+            }
+            }
+            if (feature.properties['CnpyLss'] >= -5.467045 && feature.properties['CnpyLss'] <= 2.605156 ) {
+                return {
+                pane: 'pane_TreeCanopyLossNegativeindicatestreecanopygain1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(247,247,247,1.0)',
+            }
+            }
+            if (feature.properties['CnpyLss'] >= 2.605156 && feature.properties['CnpyLss'] <= 10.677357 ) {
+                return {
+                pane: 'pane_TreeCanopyLossNegativeindicatestreecanopygain1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(241,182,218,1.0)',
+            }
+            }
+            if (feature.properties['CnpyLss'] >= 10.677357 && feature.properties['CnpyLss'] <= 18.749558 ) {
+                return {
+                pane: 'pane_TreeCanopyLossNegativeindicatestreecanopygain1',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(208,28,139,1.0)',
+            }
+            }
+        }
+        map.createPane('pane_TreeCanopyLossNegativeindicatestreecanopygain1');
+        map.getPane('pane_TreeCanopyLossNegativeindicatestreecanopygain1').style.zIndex = 601;
+        map.getPane('pane_TreeCanopyLossNegativeindicatestreecanopygain1').style['mix-blend-mode'] = 'normal';
+    var layer_TreeCanopyLossNegativeindicatestreecanopygain1 = new L.geoJson(json_TreeCanopyLossNegativeindicatestreecanopygain1, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_TreeCanopyLossNegativeindicatestreecanopygain1',
+        onEachFeature: pop_TreeCanopyLossNegativeindicatestreecanopygain1,
+        style: style_TreeCanopyLossNegativeindicatestreecanopygain1
+    });
+        bounds_group.addLayer(layer_TreeCanopyLossNegativeindicatestreecanopygain1);
+        map.addLayer(layer_TreeCanopyLossNegativeindicatestreecanopygain1);
+        function pop_Citieswith50000ppl2(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    layer.setStyle(style_Citieswith50000ppl2(feature));
+
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">NAME</th>\
+                        <td>' + (feature.properties['NAME'] !== null ? Autolinker.link(String(feature.properties['NAME'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CnpyLss</th>\
+                        <td>' + (feature.properties['CnpyLss'] !== null ? Autolinker.link(String(feature.properties['CnpyLss'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">ImprvGn</th>\
+                        <td>' + (feature.properties['ImprvGn'] !== null ? Autolinker.link(String(feature.properties['ImprvGn'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">PpDnsty</th>\
+                        <td>' + (feature.properties['PpDnsty'] !== null ? Autolinker.link(String(feature.properties['PpDnsty'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Citieswith50000ppl2() {
+            return {
+                pane: 'pane_Citieswith50000ppl2',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 4.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(77,172,38,0.0)',
+            }
+        }
+        map.createPane('pane_Citieswith50000ppl2');
+        map.getPane('pane_Citieswith50000ppl2').style.zIndex = 602;
+        map.getPane('pane_Citieswith50000ppl2').style['mix-blend-mode'] = 'normal';
+    var layer_Citieswith50000ppl2 = new L.geoJson(json_Citieswith50000ppl2, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Citieswith50000ppl2',
+        onEachFeature: pop_Citieswith50000ppl2,
+        style: style_Citieswith50000ppl2
+    });
+        bounds_group.addLayer(layer_Citieswith50000ppl2);
+        map.addLayer(layer_Citieswith50000ppl2);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/Citieswith50000ppl2.png" /> Cities with > 50000 ppl': layer_Citieswith50000ppl2,'Tree Canopy Loss (Negative indicates tree canopy gain)<br /><table><tr><td style="text-align: center;"><img src="legend/TreeCanopyLossNegativeindicatestreecanopygain1_2161141353920.png" /></td><td> -21.6114 - -13.5392 </td></tr><tr><td style="text-align: center;"><img src="legend/TreeCanopyLossNegativeindicatestreecanopygain1_135392546701.png" /></td><td> -13.5392 - -5.4670 </td></tr><tr><td style="text-align: center;"><img src="legend/TreeCanopyLossNegativeindicatestreecanopygain1_54670260522.png" /></td><td> -5.4670 - 2.6052 </td></tr><tr><td style="text-align: center;"><img src="legend/TreeCanopyLossNegativeindicatestreecanopygain1_260521067743.png" /></td><td> 2.6052 - 10.6774 </td></tr><tr><td style="text-align: center;"><img src="legend/TreeCanopyLossNegativeindicatestreecanopygain1_1067741874964.png" /></td><td> 10.6774 - 18.7496 </td></tr></table>': layer_TreeCanopyLossNegativeindicatestreecanopygain1,'Percent Impervious Gain<br /><table><tr><td style="text-align: center;"><img src="legend/PercentImperviousGain0_00030.png" /></td><td> 0.0 - 0.3 </td></tr><tr><td style="text-align: center;"><img src="legend/PercentImperviousGain0_03101.png" /></td><td> 0.3 - 1.0 </td></tr><tr><td style="text-align: center;"><img src="legend/PercentImperviousGain0_10202.png" /></td><td> 1.0 - 2.0 </td></tr><tr><td style="text-align: center;"><img src="legend/PercentImperviousGain0_20503.png" /></td><td> 2.0 - 5.0 </td></tr><tr><td style="text-align: center;"><img src="legend/PercentImperviousGain0_501174.png" /></td><td> 5.0 - 11.7 </td></tr></table>': layer_PercentImperviousGain0,},{collapsed:false}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>
