@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Mike Treglia</title>
+    <link>/about/</link>
+    <description>Recent content in Abouts on Mike Treglia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>A Bit About Me: I work as the Urban Spatial Planner for The Nature Conservancy&amp;rsquo;s New York City Program. In this role I use GIS, Remote Sensing, and statistical tools to characterize the current open space in the city, while thinking about how we can improve the state of biodiversity and develop resilience to climate change. I grew up in Staten Island, NY, and am delighted to now be working on conservation issues of my entire home city.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Researches on Mike Treglia</title>
+    <link>/research/</link>
+    <description>Recent content in Researches on Mike Treglia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Research</title>
+      <link>/research/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/research/</guid>
+      <description>Click here for a list of my publicationsClick here for my complete CV
+Current Work My current work is broadly focused on using statistical and and GIS tools to inform conservation efforts. Working for The Nature Conservancy in New York City, I using available remote sensing data and GIS datasets to characterize open space dynamics, understand how connected wildlife populations might be across the city, and map previously-unmapped assets, like green roofs.</description>
+    </item>
+    
+  </channel>
+</rss>
