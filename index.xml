@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 08 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Time for Website Makeover</title>
+      <title>Getting Going with Blogdown &amp; Hugo</title>
+      <link>/post/20170123_blogdown_hugo/</link>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/20170123_blogdown_hugo/</guid>
+      <description>Why Blogdown? As I&amp;rsquo;ve noted before, my previous website was pretty basic. While it was largely simple to make updates, it wasn&amp;rsquo;t particularly elegant. It was functional, and definitely looked reasonable when it was first created. Editing it wasn&amp;rsquo;t too difficult, but took some forethought if I wanted to make updates across the website. I&amp;rsquo;m not at all trained in web development, and just I picked up a few things by working off a template a friend created for me, and toying around with some .</description>
+    </item>
+    
+    <item>
+      <title>Time for a Website Makeover</title>
       <link>/post/time-for-webpage-update/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
@@ -28,16 +37,6 @@
       
       <guid>/about/</guid>
       <description>A Bit About Me: I work as the Urban Spatial Planner for The Nature Conservancy&amp;rsquo;s New York City Program. In this role I use GIS, Remote Sensing, and statistical tools to characterize the current open space in the city, while thinking about how we can improve the state of biodiversity and develop resilience to climate change. I grew up in Staten Island, NY, and am delighted to now be working on conservation issues of my entire home city.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/photography/</link>
-      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/photography/</guid>
-      <description>Education: There I taught courses on Click Here to view as a PDF Doctor of Philosophy (2014) Texas A&amp;amp;M University, Department of Wildlife and Fisheries, Advised by Dr. Lee Fitzgerald  Dissertation Title: Multi-Scale Conservation in an Altered Landscape: The Case of the Endangered Arroyo Toad in Southern California Masters of Science (2010) Texas A&amp;amp;M University, Department of Wildlife and Fisheries, Advised by Dr. Lee Fitzgerald
- Thesis Title: A Translocated Population of the St.</description>
     </item>
     
     <item>
@@ -57,6 +56,15 @@
       <guid>/contact/</guid>
       <description>E-mail Work: michael.treglia(at)tnc.org  Personal: mtreglia(at)gmail.com
 Mailing Address Michael Treglia  The Nature Conservancy  322 8th Ave, 16th Floor  New York, NY 10001</description>
+    </item>
+    
+    <item>
+      <title>Photography</title>
+      <link>/photography/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/photography/</guid>
+      <description> Content Coming Soon! </description>
     </item>
     
     <item>

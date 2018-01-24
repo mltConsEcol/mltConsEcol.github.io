@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.32.3" />
 
-  <title>Time for Website Makeover &middot; Mike Treglia</title>
+  <title>Time for a Website Makeover &middot; Mike Treglia</title>
 
   
   
@@ -97,6 +97,12 @@
       
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="/code/"><i class='fa fa-code fa-fw'></i>Coding Projects</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/photography/"><i class='fa fa-camera fa-fw'></i>Photography</a>
       
         </li>
       
@@ -225,7 +231,7 @@
 
 
 <div class="header">
-  <h1>Time for Website Makeover</h1>
+  <h1>Time for a Website Makeover</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -247,13 +253,9 @@
   <div>
     <i class="fa fa-tags fa-fw"></i>
     
-      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
-    
       <a class="post-taxonomy-tag" href="/tags/blogdown">blogdown</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="/tags/hugo">hugo</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/r-markdown">R Markdown</a>
+      <a class="post-taxonomy-tag" href="/tags/web-dev">web dev</a>
     
   </div>
   
@@ -267,7 +269,7 @@
 
 <p>I got my original website started in the beginning of grad school (circa 2007), with great help from a college friend. As this one, it was static, but relied directly on CSS and HTML, with no real page generator in the sense of Jekyll or Hugo. It&rsquo;s been great for me - serving as a place to link other projects I&rsquo;ve developed; for example, a <a href="www.qgis.org">QGIS</a> tutorial I wrote for a workshop, and materials from a <a href="https://mltconsecol.github.io/TU_LandscapeAnalysis_Documents/">GIS/Spatial Analysis course</a> I taught as a postdoc. (<em>as you&rsquo;ll notice, I&rsquo;ve learned my lesson about needing responsive webpages, esp. with the latter example, but that site still serves to get information across and gets a fair number of hits, so I leave it up, unaltered at this point</em>).</p>
 
-<p>Times have changed and while I used to edit the raw HTML to make all edits to my website, great tools have come online, making life a lot easier (<em>I think/hope; at the very least, it&rsquo;s a lot easier to make a nicer looking website</em>). I&rsquo;ve made some minor changes in the last few years, adding link with icons to twitter, github,and other accounts, and transitioned from a university-based page to github pages, but nothing really new in terms of aesthetics. Thus, here we go. I&rsquo;ll try to document how I did this in the next couple of weeks, at least coarsely, and note some key challenges/lessons learned. (Spoiler Alert: <a href="blogdown website">blogdown</a> from R)</p>
+<p>Times have changed and while I previously edited raw HTML to make all edits to my website, great tools have come online, making life a lot easier (<em>I think/hope; at the very least, it&rsquo;s a lot easier to make a nicer looking website</em>). I&rsquo;ve made some minor changes in the last few years, adding link with icons to twitter, github,and other accounts, and transitioned from a university-based page to github pages, but nothing really new in terms of aesthetics. Thus, here we go. I&rsquo;ll try to document how I did this in the next couple of weeks, at least coarsely, and note some key challenges/lessons learned. (Spoiler Alert: I used <a href="https://blog.rstudio.com/2017/09/11/announcing-blogdown/">Blogdown</a>)</p>
 
 
   
@@ -283,8 +285,14 @@
   </div>
   <div class="pure-u-10-24">
     
+    <nav class="next">
+      <a href="/post/20170123_blogdown_hugo/">Getting Going with Blogdown &amp; Hugo</a>
+    </nav>
+    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="/post/20170123_blogdown_hugo/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -292,6 +300,24 @@
 
 
   
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'miketreglia ';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
 
 </div>
 
