@@ -102,12 +102,6 @@
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="/photography/"><i class='fa fa-camera fa-fw'></i>Photography</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
           <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
       
         </li>
@@ -244,13 +238,13 @@
 
 <h2 id="overview">Overview</h2>
 
-<p>I use primarily use <a href="https://cran.r-project.org/">R</a> for scientific computing, but also dabble in <a href="https://www.gnu.org/software/bash/">bash</a>, and use <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> a fair bit for spatial stuff, working from <a href="https://www.postgresql.org/">PostgreSQL</a>/<a href="https://postgis.net/">PostGIS</a> databases.</p>
+<p>I primarily use <a href="https://cran.r-project.org/">R</a> for scientific computing, but also dabble in <a href="https://www.gnu.org/software/bash/">bash</a>, and use <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> a fair bit for spatial stuff, working from <a href="https://www.postgresql.org/">PostgreSQL</a>/<a href="https://postgis.net/">PostGIS</a> databases.</p>
 
-<p>I&rsquo;ll disclaim that I have limited formal training in coding of any sort. However, have been really fortunate for opportunities to improve my skills since largely teaching myself R in grad school. In particular, in 2014 I attended a joint <a href="https://www.nceas.ucsb.edu/">NCEAS</a>/<a href="http://renci.org/">RENCI</a> Open Science for Synthesis session, focused in training early career scientists useful computing tools to allow for reproducible research. This was a 3-week intensive course that covered a lot, and got me comfortable using some valuable and common tools of the trade. I&rsquo;d highly recommend this to others.</p>
+<p>I&rsquo;ll disclaim that I have limited formal training in coding, but have been really fortunate for opportunities to improve my skills through a few opportunities I&rsquo;d encourage others to look into. First, in 2014 I attended a joint <a href="https://www.nceas.ucsb.edu/">NCEAS</a>/<a href="http://renci.org/">RENCI</a> Open Science for Synthesis session, focused in training early career scientists useful computing tools to allow for reproducible research. This was a 3-week intensive course that covered a lot, and got me comfortable using some valuable and common tools of the trade. I&rsquo;d highly recommend this to others.</p>
 
-<p>Also, during my Postdoc at the University of Tulsa, I was able to engage in emerging <a href="https://software-carpentry.org/">Software Carpentry</a> community at Oklahoma State University. Software Carpentry (and the related <a href="http://www.datacarpentry.org/">Data Carpentry</a>) is dedicated to teaching researchers computing skills to be more efficient and conduct reproducible research. They offer courses in a variety of tools, including Git, R, Python, Bash, and SQL, among others. Furthermore, they have a strong focus on pedagogy, using tried and true principles with the learners. If you are new to coding and have an opportunity, I highly recommend workshops from the Carpentries.</p>
+<p>Also, during my Postdoc at the University of Tulsa, I was able to engage in the emerging <a href="https://software-carpentry.org/">Software Carpentry</a> community at Oklahoma State University. Software Carpentry (and the sibling <a href="http://www.datacarpentry.org/">Data Carpentry</a>) is dedicated to teaching researchers computing skills to be more efficient and conduct reproducible research. They offer courses in a variety of tools, including Git, R, Python, Bash, and SQL, among others. Furthermore, they have a strong emphasis on pedagogy, using tried and true principles with the learners. If you are new to coding and have an opportunity, I highly recommend workshops from the Carpentries.</p>
 
-<p>Here I&rsquo;ve listed a few things I&rsquo;ve worked on, which I hope others might find useful. Otherwise, my code can largely be found on two GitHub accounts; <a href="https://github.com/mltConsEcol">mltConsEcol</a> is set up more for collaboration and such, and <a href="https://github.com/mtreg/">mtreg</a> is generally for smaller, one-off types of projects.</p>
+<p>Below I&rsquo;ve listed a few things I&rsquo;ve worked on, which I hope others might find useful. My code can largely be found on two GitHub accounts; <a href="https://github.com/mltConsEcol">mltConsEcol</a> is set up more for collaboration and such, and <a href="https://github.com/mtreg/">mtreg</a> is generally for smaller, one-off types of projects.</p>
 
 <h2 id="a-name-ibuttons-a-ibutton-data-organizer"><a name="ibuttons"></a>iButton Data Organizer</h2>
 
@@ -260,7 +254,7 @@
 
 <p>Some of the datasets I use are distributed as NetCDF files, which can be complex, involving multiple strata of data (e.g., multiple depths in the ocean) and with many time points.  As of this writing, two main datasets I&rsquo;ve worked with are the <a href="http://hudson.dl.stevens-tech.edu/maritimeforecast/">NY Harbor Observation and Prediction System (NYHOPS)</a> and <a href="http://www.scrimhub.org/resources/topowx/">TopoWx (TopoWeather)</a>. Thus, you can find some code I&rsquo;ve developed for accessing these data on <a href="https://github.com/mltConsEcol/misc_netCDF_access">GitHub</a>.</p>
 
-<p><em>Note: this will likely not work on Windows due to lack of dependencies for the ncdf4 package. I tend to set up a Linux virtual machine via <a href="https://www.virtualbox.org">VirtualBox</a> for this work.</em></p>
+<p><em>Note: this will likely not work on Windows due to lacking dependencies for the ncdf4 package. I tend to set up a Linux virtual machine via <a href="https://www.virtualbox.org">VirtualBox</a> for this work.</em></p>
 
 <h2 id="a-name-lastools-a-lastools-wrapper-functions-from-r"><a name="lastools"></a>LAStools Wrapper Functions from R</h2>
 

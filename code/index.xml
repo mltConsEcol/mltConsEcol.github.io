@@ -19,8 +19,8 @@
       
       <guid>/code/</guid>
       <description>Overview iButton Data Organizer NetCDF Data Access LAStools Wrapper Functions from R
-Overview I use primarily use R for scientific computing, but also dabble in bash, and use SQL a fair bit for spatial stuff, working from PostgreSQL/PostGIS databases.
-I&amp;rsquo;ll disclaim that I have limited formal training in coding of any sort. However, have been really fortunate for opportunities to improve my skills since largely teaching myself R in grad school.</description>
+Overview I primarily use R for scientific computing, but also dabble in bash, and use SQL a fair bit for spatial stuff, working from PostgreSQL/PostGIS databases.
+I&amp;rsquo;ll disclaim that I have limited formal training in coding, but have been really fortunate for opportunities to improve my skills through a few opportunities I&amp;rsquo;d encourage others to look into. First, in 2014 I attended a joint NCEAS/RENCI Open Science for Synthesis session, focused in training early career scientists useful computing tools to allow for reproducible research.</description>
     </item>
     
   </channel>
