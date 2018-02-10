@@ -8,7 +8,7 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     
-	<atom:link href="/topics/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/topics/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

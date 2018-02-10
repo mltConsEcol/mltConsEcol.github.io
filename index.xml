@@ -9,7 +9,7 @@
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,176 @@
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/20170123_blogdown_hugo/</guid>
-      <description>Why Blogdown? As I&amp;rsquo;ve noted before, my previous website was pretty basic. While it was largely simple to make updates, it wasn&amp;rsquo;t particularly elegant. It was functional, and definitely looked reasonable when it was first created. Editing it wasn&amp;rsquo;t too difficult, but took some forethought if I wanted to make updates across the website. I&amp;rsquo;m not at all trained in web development, and just I picked up a few things by working off a template a friend created for me, and toying around with some .</description>
+      <description>
+
+&lt;h2 id=&#34;why-blogdown&#34;&gt;Why Blogdown?&lt;/h2&gt;
+
+&lt;p&gt;As I&amp;rsquo;ve &lt;a href=&#34;../time-for-webpage-update/&#34;&gt;noted before&lt;/a&gt;, my previous website was pretty basic. While it was largely simple to make updates, it wasn&amp;rsquo;t particularly elegant. It was functional, and definitely looked reasonable when it was first created. Editing it wasn&amp;rsquo;t too difficult, but took some forethought if I wanted to make updates across the website. I&amp;rsquo;m not at all trained in web development, and just I picked up a few things by working off a template a friend created for me, and toying around with some .js code in leaflet maps (and lots of googling of course); thus, I might have missed some things that would have made my life a lot easier, but here I am.&lt;/p&gt;
+
+&lt;p&gt;In the middle/end of grad school I picked up a suite of tools which I now use regularly - namely &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt;, &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; (and &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;), and &lt;a href=&#34;https://en.wikipedia.org/wiki/Markdown&#34;&gt;markdown&lt;/a&gt;, among others. The R package, &lt;a href=&#34;https://blog.rstudio.com/2017/09/11/announcing-blogdown/&#34;&gt;Blogdown&lt;/a&gt;, which was only developed in recent years, facilitates using R/R markdown/Markdown to make a better-looking website that is easier to update. Blogdown relies on &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, a static page generator that can compile markdown files with templates into full webpages.&lt;/p&gt;
+
+&lt;p&gt;This post is intended to summarize some aspects of Blogdown, Hugo, and getting it all set up with GitHub Pages as I figured it out, as well as highlight some things I learned.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-started-with-blogdown&#34;&gt;Getting Started with Blogdown&lt;/h2&gt;
+
+&lt;p&gt;Thankfully, I&amp;rsquo;m far from the first person who&amp;rsquo;s used Blogdown to get a website going, and there&amp;rsquo;s even a &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;free e-book&lt;/a&gt; by &lt;a href=&#34;https://yihui.name&#34;&gt;Yihui Xie&lt;/a&gt;, &lt;a href=&#34;https://amber.rbind.io&#34;&gt;Amber Thomas&lt;/a&gt;, and &lt;a href=&#34;https://alison.rbind.io&#34;&gt;Alison Presmanes Hill&lt;/a&gt; on the topic. There are also numerous blogs, including &lt;a href=&#34;https://tclavelle.github.io/blog/blogdown_github/&#34;&gt;this one&lt;/a&gt; I&amp;rsquo;ve found useful. If you&amp;rsquo;re just getting started, definitely go through the first  chapters of the e-book and try to get something going on your local machine before getting your site online.&lt;/p&gt;
+
+&lt;h3 id=&#34;choosing-a-hugo-theme-and-making-some-minor-changes&#34;&gt;Choosing a Hugo Theme and Making some Minor Changes&lt;/h3&gt;
+
+&lt;p&gt;An important step in setting up your site that will be generated via Hugo is choosing a Theme - i.e., a template that you&amp;rsquo;ll adjust and feed your content into for rendering. You can think through what your needs are, and filter by different characteristics. For example, I wanted my site to be responsive, so I only looked at &lt;a href=&#34;https://themes.gohugo.io/tags/responsive/&#34;&gt;themes that were tagged as such&lt;/a&gt;. Then, I browsed through some of the demos, and saw what elements they had. Having clear links to social media pages and such seemed useful, as well as having a way to create a fairly straightforward blog. As indicated on the left panel of this page, I went with the &lt;a href=&#34;https://themes.gohugo.io/blackburn/&#34;&gt;Blackburn theme&lt;/a&gt; developed by &lt;a href=&#34;http://yoshiharuyamashita.com/&#34;&gt;Yoshiharu Yamashita&lt;/a&gt;. It was aesthetically pleasing, had fairly recent commits in the GitHub repo (indicating it is still maintained), and seemed fairly customizable.&lt;/p&gt;
+
+&lt;p&gt;I started by following the workflow suggested in the aforementioned e-book, adjusting configuration settings (in the configuration file, &lt;em&gt;config.toml&lt;/em&gt;) that comes with the template to make sure I could adjust some things I wanted, and went from there. In particular, below is my initial code, run in &lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Install packages and dependencies
+install.packages(&amp;quot;blogdown&amp;quot;)
+blogdown::install_hugo()
+install.packages(&amp;quot;later&amp;quot;)
+
+# Set up web project
+blogdown::new_site(dir = &amp;quot;blackburnFiles&amp;quot;, #New Directory within working directory where web content will be stored
+                   theme = &#39;yoshiharuyamashita/blackburn&#39;, #theme information
+                   format = &#39;toml&#39;) #specify toml instead of yaml
+				   
+#To build and view default page
+setwd(&amp;quot;blackburnFiles&amp;quot;)
+blogdown::build_site()
+blogdown::serve_site()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There were a few particular things that I wanted to adjust in the config file - some were pretty self-explanatory and others were a matter of trial and error. Particular things I edited in the config.toml file (which can easily be done within RStudio or any text editor) are noted below, followed by the original config file with notes included after hashtags [Note: Some comments were already included]. Also, I&amp;rsquo;ll add that some of these edits might be very specific to the Blackburn theme, but I honestly haven&amp;rsquo;t done enough exploration at this point to verify. (Any quick insights are welcome.) The LiveReload functionality was handy, as every time I&amp;rsquo;d save an edit to the config.toml file, I&amp;rsquo;d see the result pretty much immediately. More details on configuration files are &lt;a href=&#34;https://bookdown.org/yihui/blogdown/configuration.html&#34;&gt;here&lt;/a&gt;; I didn&amp;rsquo;t make a ton of adjustments, mostly focusing on making it work for my immediate purposes.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Brand (Blackburn -&amp;gt; MikeTreglia)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;baseurl (&amp;ldquo;&lt;a href=&#34;https://www.example.com/&amp;quot;&#34;&gt;https://www.example.com/&amp;quot;&lt;/a&gt; -&amp;gt; &amp;ldquo;&lt;a href=&#34;https://mltconsecol.github.io/&amp;quot;&#34;&gt;https://mltconsecol.github.io/&amp;quot;&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;High level page listing.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I wasn&amp;rsquo;t sure where the icons next to the label came from, but from googling the code snippet preceding the name of the pages in the config file, found these were &lt;a href=&#34;http://fontawesome.io/&#34;&gt;Font Awesome&lt;/a&gt; icons You can find a whole bunch of alternatives to use as you see appropriate.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Because Font Awesome is pulling from a remote source, if you&amp;rsquo;re testing without  internet the icons will be lacking. (There are other elements in the theme that seem to rely on remote info, such as the font, so if you&amp;rsquo;re testing without internet access, don&amp;rsquo;t freak out about strange appearances yet.)&lt;/em&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Updated info for Social Media links/remove irrelevant ones. You can conveniently comment out irrelevant ones by simply prefacing them with a #.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I also updated a few other things, mostly pretty self-explanatory so I won&amp;rsquo;t go into further detail at this point.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;https://www.example.com/&amp;quot; #updated this appropriately for my own page
+languageCode = &amp;quot;en-us&amp;quot;
+title = &amp;quot;Blackburn Theme Demo&amp;quot; #Changed to the title for my site (my name))
+theme = &amp;quot;blackburn&amp;quot;
+author = &amp;quot;Yoshiharu Yamashita&amp;quot; #Adjusted appropriately
+copyright = &amp;quot;&amp;amp;copy; 2016. All rights reserved.&amp;quot; #Changed to 2018
+canonifyurls = true
+paginate = 10
+
+#This was added as per suggestion/warning in R upon build:
+ignoreFiles = [&amp;quot;\\.Rmd$&amp;quot;, &amp;quot;\\.Rmarkdown$&amp;quot;, &amp;quot;_files$&amp;quot;, &amp;quot;_cache$&amp;quot;] 
+
+
+[indexes]
+  tag = &amp;quot;tags&amp;quot;
+  topic = &amp;quot;topics&amp;quot;
+
+[params]
+  # Shown in the home page
+  subtitle = &amp;quot;A Hugo Theme&amp;quot; #Updated as appropriate for my own descriptors
+  brand = &amp;quot;Blackburn&amp;quot; #Brand corresponds to the &#39;MikeTreglia&#39; in the upper-left of the side-bar
+  googleAnalytics = &amp;quot;Your Google Analytics tracking ID&amp;quot; #Fill this in as desired
+  disqus = &amp;quot;Your Disqus shortname&amp;quot;
+  # CSS name for highlight.js
+  highlightjs = &amp;quot;androidstudio&amp;quot;
+  dateFormat = &amp;quot;02 Jan 2006, 15:04&amp;quot; #This drives how date/time will be displayed with blog posts. I eliminated the time from mine.
+
+#You can add/remove elements in the side menu here; weight adjusts the ordering.
+[menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = &amp;quot;Home&amp;quot;
+    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-home fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+    weight = 1
+    identifier = &amp;quot;home&amp;quot;
+    url = &amp;quot;/&amp;quot;
+  [[menu.main]]
+    name = &amp;quot;Posts&amp;quot;
+    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-list fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+    weight = 2
+    identifier = &amp;quot;post&amp;quot;
+    url = &amp;quot;/post/&amp;quot;
+  [[menu.main]]
+    name = &amp;quot;About&amp;quot;
+    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-user fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+    weight = 3
+    identifier = &amp;quot;about&amp;quot;
+    url = &amp;quot;/about/&amp;quot;
+  [[menu.main]]
+    name = &amp;quot;Contact&amp;quot;
+    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-phone fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+    weight = 4
+    url = &amp;quot;/contact/&amp;quot;
+#I added a few more as you&#39;ll see here.
+
+[social]
+  # Link your social networking accouns to the side menu
+  # by entering your username or ID.
+  twitter = &amp;quot;*&amp;quot;
+  facebook = &amp;quot;*&amp;quot;
+  instagram = &amp;quot;*&amp;quot;
+  github = &amp;quot;yoshiharuyamashita&amp;quot;
+  stackoverflow = &amp;quot;*&amp;quot;
+  linkedin = &amp;quot;*&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There are still one or two things I would consider editing, which might not have been as obvious to do and simply weren&amp;rsquo;t a high priority. For example, it would be great to add, with the social media links, a link to my Google Scholar profile (likely of interest for lots of academics).&lt;/p&gt;
+
+&lt;h3 id=&#34;editing-pages&#34;&gt;Editing Pages&lt;/h3&gt;
+
+&lt;p&gt;You&amp;rsquo;ll see that in the config file that comes with the Blackburn template, the high level page listing in the side menu directs to specific folders (e.g., &amp;ldquo;/About/&amp;rdquo; for the &lt;em&gt;About&lt;/em&gt; page). However, at least when starting everything from blogdown, there is a folder within &amp;lsquo;content&amp;rsquo; called &amp;lsquo;post&amp;rsquo;, where blog posts are saved (as Markdown/R Markdown files, to be compiled on website build), but then there are simply &amp;lsquo;about.md&amp;rsquo; and &amp;lsquo;contact.md&amp;rsquo; files. For my own organization, I decided to set up folders for each main page, such that I could keep my content organized with any related files. Thus, in my &amp;lsquo;content&amp;rsquo; folder, I have folders for each relevant page, with an index.md file, and all associated files, such as images. When the site is built, all content gets organized appropriately in the &amp;lsquo;public&amp;rsquo; folder.&lt;/p&gt;
+
+&lt;p&gt;From RStudio, there are add-ins you can use to make life a bit easier in creating new blog posts and such. These are detailed &lt;a href=&#34;https://bookdown.org/yihui/blogdown/rstudio-ide.html&#34;&gt;here&lt;/a&gt;. I&amp;rsquo;ll note that at this point, I&amp;rsquo;m just starting with new text files, filling in an appropriate yaml header (based on the template md/Rmd files) and going from there, though we&amp;rsquo;ll see how/if I adjust in the future. I definitely recommend checking out the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/output-format.html&#34;&gt;relevant section of the Blogdown book on R Markdown vs Markdown&lt;/a&gt; to better think through when you might use each in this context. And if you&amp;rsquo;re not familiar with either, definitely do some googling.&lt;/p&gt;
+
+&lt;h3 id=&#34;hosting-on-github&#34;&gt;Hosting on Github&lt;/h3&gt;
+
+&lt;p&gt;There are multiple ways to host a site created via blogdown, detailed in the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/deployment.html&#34;&gt;deployment&lt;/a&gt; section of the e-book. Since I already had experience with &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; and had a site there already, it made sense for me to stick with it, realizing it might not be the easiest way to host blogdown/hugo pages, and figuring I&amp;rsquo;ll learn a thing or two.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re new to github pages, you&amp;rsquo;ll need to set up a repository titled [username].github.io, add your content, and initialize the page through settings for your repo. (Lots of online resources are out there for getting started.)&lt;/p&gt;
+
+&lt;p&gt;GitHub Pages is set up to work with another static site generator, Jekyll, but can work with Hugo-driven pages without too much trouble (or plain old html files). I give an overview of how I did things in the steps below - this is what made sense to and worked, though definitely check out the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/github-pages.html&#34;&gt;relevant section of the blogdown e-book for more&lt;/a&gt;, as well as a &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;hugo page about hosting on GitHub Pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set up a &lt;a href=&#34;https://github.com/mltConsEcol/WebsiteFiles&#34;&gt;repository for all of my web files, &amp;ldquo;WebsiteFiles&amp;rdquo;&lt;/a&gt;. Basically I created the repo via the GitHub website, cloned it to my local machine. I had already been testing things locally, so just copied the files created from blogdown::newsite() with the edits I made, and after using &lt;code&gt;blogdown::build_site()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;I copied the contents of the &amp;lsquo;public&amp;rsquo; folder to the repository associated with GitHub Pages(mltconsecol.github.io), and deleted the contents from the &amp;lsquo;public&amp;rsquo; folder in the &amp;lsquo;WebsiteFiles&amp;rsquo; folder/repository (but leave the actual folder - just leave it empty). In the GitHub Pages repo, simply put these files in the highest level (i.e., &lt;strong&gt;do not put them in a folder within the repo called &amp;lsquo;public&amp;rsquo;&lt;/strong&gt;).
+
+&lt;ol&gt;
+&lt;li&gt;I also added a blank file called .nojekyll to the &amp;lsquo;public&amp;rsquo; folder (now in the GitHub Pages repo), which can help avoid problems of GitHub pages trying to rebuild a page via Jekyll (which won&amp;rsquo;t work, resulting in an error).&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;After pushing all of the content you just moved to your GitHub Pages repo, you can copy this content back into the WebsiteFiles/public as a git submodule. This was entirely new to me, but basically allows you to maintain a Git-tracked directory within another one. The basic git command for this is &lt;code&gt;git submodule add -b master git@github.com:[username]/[username].github.io.git public&lt;/code&gt;.
+
+&lt;ol&gt;
+&lt;li&gt;In my case, this required setting up an ssh key, which I had never done before with Git. (It also reminded me to set up two-factor authentication for GitHub - important and easy for added security.) The error I received included &amp;ldquo;&lt;code&gt;Error: Permission denied (publickey)&lt;/code&gt;.&amp;rdquo; Thankfully there are &lt;a href=&#34;https://help.github.com/articles/error-permission-denied-publickey/&#34;&gt;great docs on how to deal with this&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;As you edit your content and rebuild the site, you can commit and push your changes to your high-level folder/repository (WebsiteFiles, in my case), as well as the &lt;em&gt;public&lt;/em&gt; folder, needed for the changes to take shape on your actual website.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;other-notes&#34;&gt;Other notes&lt;/h3&gt;
+
+&lt;p&gt;There are a few other notes worth raising before wrapping up.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;It&amp;rsquo;s important that users realize the themes are often times being updated through time. How should I, as somebody with a website keep up with such changes? A quick post to the &lt;a href=&#34;https://twitter.com/pjs_228/status/950095675961864194&#34;&gt;twitter-verse&lt;/a&gt; indicated to set up the theme using a git submodule framework. A quick google around this yields some useful results, such as &lt;a href=&#34;http://choomnuan.com/blog/2015/07/18/how-to-setup-hugos-theme-using-git-submodule/&#34;&gt;this post&lt;/a&gt;, among others. At this point I haven&amp;rsquo;t done this - but might be good practice for the future, or might add it&amp;rsquo;s own complexities.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you keep your files in Dropbox folders or similar and sync across multiple computers, make sure you don&amp;rsquo;t mess up your syncing! Ideally, make sure your computers are synced before making changes. This caused me some issues at some point, and I had to restore an earlier version of my work after wondering why nothing was rendering right. Because there can be a bunch of files that get re-created upon each build, it might take a minute or two for syncing to complete, depending on your content, connection, etc.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;For testing purposes, I tried to simply set up the new website as a new page-enabled github repo on the same account my website is hosted from. I ended up running into some issues, in which I had problems with links to internal pages breaking, or strangely the sidebar not popping up on mobile/narrow screens. (I messed around with options to adjust the &amp;lsquo;baseurl&amp;rsquo; as seemingly appropriate and such, but never got everything working.) Thus, I ended up testing a bit more completely by running the website from another GitHub account, and didn&amp;rsquo;t actually fix the issues I was facing in running as another GitHub project. At this point I&amp;rsquo;m just saving that for another time, when an actual need comes up. I was more worried about getting this site to be functional and live, and apparently I&amp;rsquo;ve gotten there.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At this point I&amp;rsquo;ve decided to add a &lt;a href=&#34;https://disqus.com/&#34;&gt;Disqus&lt;/a&gt; comments section. Googling around about disqus and hugo, it seems a lot of folks aren&amp;rsquo;t the biggest fans (see &lt;a href=&#34;https://discourse.gohugo.io/t/alternative-to-disqus-needed-more-than-ever/5516&#34;&gt;here&lt;/a&gt;). That said, as I&amp;rsquo;ve noted before, I&amp;rsquo;m interested in getting this site up and running functionally, and especially for posts like this I see functionality in having a comment section. Thus, I&amp;rsquo;ve added disqus-based comments here, realizing I can always disable it if I need. And I conveniently just stumbled upon &lt;a href=&#34;https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/&#34;&gt;this useful blog post&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -27,7 +196,14 @@
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/time-for-webpage-update/</guid>
-      <description>Time for a Change I got my original website started in the beginning of grad school (circa 2007), with great help from a college friend. As this one, it was static, but relied directly on CSS and HTML, with no real page generator in the sense of Jekyll or Hugo. It&amp;rsquo;s been great for me - serving as a place to link other projects I&amp;rsquo;ve developed; for example, a QGIS tutorial I wrote for a workshop, and materials from a GIS/Spatial Analysis course I taught as a postdoc.</description>
+      <description>
+
+&lt;h2 id=&#34;time-for-a-change&#34;&gt;Time for a Change&lt;/h2&gt;
+
+&lt;p&gt;I got my original website started in the beginning of grad school (circa 2007), with great help from a college friend. As this one, it was static, but relied directly on CSS and HTML, with no real page generator in the sense of Jekyll or Hugo. It&amp;rsquo;s been great for me - serving as a place to link other projects I&amp;rsquo;ve developed; for example, a &lt;a href=&#34;www.qgis.org&#34;&gt;QGIS&lt;/a&gt; tutorial I wrote for a workshop, and materials from a &lt;a href=&#34;https://mltconsecol.github.io/TU_LandscapeAnalysis_Documents/&#34;&gt;GIS/Spatial Analysis course&lt;/a&gt; I taught as a postdoc. (&lt;em&gt;as you&amp;rsquo;ll notice, I&amp;rsquo;ve learned my lesson about needing responsive webpages, esp. with the latter example, but that site still serves to get information across and gets a fair number of hits, so I leave it up, unaltered at this point&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Times have changed and while I previously edited raw HTML to make all edits to my website, great tools have come online, making life a lot easier (&lt;em&gt;I think/hope; at the very least, it&amp;rsquo;s a lot easier to make a nicer looking website&lt;/em&gt;). I&amp;rsquo;ve made some minor changes in the last few years, adding link with icons to twitter, github,and other accounts, and transitioned from a university-based page to github pages, but nothing really new in terms of aesthetics. Thus, here we go. I&amp;rsquo;ll try to document how I did this in the next couple of weeks, at least coarsely, and note some key challenges/lessons learned. (Spoiler Alert: I used &lt;a href=&#34;https://blog.rstudio.com/2017/09/11/announcing-blogdown/&#34;&gt;Blogdown&lt;/a&gt;)&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -36,7 +212,30 @@
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>A Bit About Me: I work as the Urban Spatial Planner for The Nature Conservancy&amp;rsquo;s New York City Program. In this role I use GIS, Remote Sensing, and statistical tools to characterize the current open space in the city, while thinking about how we can improve the state of biodiversity and develop resilience to climate change. I grew up in Staten Island, NY, and am delighted to now be working on conservation issues of my entire home city.</description>
+      <description>
+
+&lt;h3 id=&#34;a-bit-about-me&#34;&gt;A Bit About Me:&lt;/h3&gt;
+
+&lt;p&gt;I work as the Urban Spatial Planner for &lt;a href=&#34;http://www.nature.org/ourinitiatives/regions/northamerica/unitedstates/newyork/places-preserves/new-york-city.xml&#34; target=&#34;_About&#34;&gt;The Nature Conservancy&amp;rsquo;s New York City Program&lt;/a&gt;. In this role I use GIS, Remote Sensing, and statistical tools to characterize the current open space in the city, while thinking about how we can improve the state of biodiversity and develop resilience to climate change. I grew up in Staten Island, NY, and am delighted to now be working on conservation issues of my entire home city.&lt;/p&gt;
+
+&lt;p&gt;Prior to my current position I workd as a Postdoctoral Scholar at the University of Tulsa, with &lt;a href=&#34;http://ronbonett.weebly.com/&#34; target=&#34;_About&#34;&gt;Dr. Ron Bonett&lt;/a&gt; as part of the NSF-Funded &lt;a href=&#34;http://www.okepscor.org/&#34; target=&#34;_About&#34;&gt;Oklahoma EPSCoR program&lt;/a&gt;. There I taught courses on &lt;a href=&#34;http://mltconsecol.github.io/TU_LandscapeAnalysis_Documents&#34; target=&#34;_About&#34;&gt; spatial analysis &lt;/a&gt;, conducted research on environmental drivers of alternative life histories in salamanders, and worked on preparing Oklahoma LiDAR data for use by other researchers in the state.&lt;/p&gt;
+
+&lt;p&gt;I completed my PhD at Texas A&amp;amp;M University in the Department of Wildlife and Fisheries Sciences.  My general research interests are in the fields of landscape ecology and conservation biology, with an emphasis on amphibians and reptiles. My dissertation research focused on understanding how anthropogenic landscape alterations impact amphibians indirectly, through large-scale processes. I conducted this work as part of the &lt;a href=&#34;http://biodiversity.tamu.edu&#34; target=&#34;_About&#34;&gt;Applied Biodiversity Sciences IGERT program&lt;/a&gt; (NSF-Funded) at Texas A&amp;amp;M.&lt;/p&gt;
+
+&lt;h3 id=&#34;education&#34;&gt;Education:&lt;/h3&gt;
+
+&lt;p&gt;Doctor of Philosophy (2014) Texas A&amp;amp;M
+University, Department of Wildlife and Fisheries, Advised by Dr. Lee
+Fitzgerald. Dissertation Title: &lt;em&gt;Multi-Scale Conservation in an Altered Landscape: The Case of the Endangered Arroyo Toad in Southern California&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Masters of Science (2010) Texas A&amp;amp;M
+University, Department of Wildlife and Fisheries, Advised by Dr. Lee
+Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix Ground Lizard: Analyzing its Detection Probability and Investigating Its Impacts on the Local Prey Base&lt;/em&gt; (&lt;a href=&#34;Treglia 2010_Thesis.pdf&#34;&gt;Click Here to view as a PDF&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Bachelors of Science (2007) Cornell University, Department of Natural Resources.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;treglia_cv_20180107_norefs.pdf&#34;&gt;Click here to download my CV&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -45,9 +244,37 @@
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/code/</guid>
-      <description>Overview iButton Data Organizer NetCDF Data Access LAStools Wrapper Functions from R
-Overview I primarily use R for scientific computing, but also dabble in bash, and use SQL a fair bit for spatial stuff, working from PostgreSQL/PostGIS databases.
-I&amp;rsquo;ll disclaim that I have limited formal training in coding, but have been really fortunate for opportunities to improve my skills through a few opportunities I&amp;rsquo;d encourage others to look into. First, in 2014 I attended a joint NCEAS/RENCI Open Science for Synthesis session, focused in training early career scientists useful computing tools to allow for reproducible research.</description>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;#ibuttons&#34;&gt;iButton Data Organizer&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;#netcdf&#34;&gt;NetCDF Data Access&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;#lastools&#34;&gt;LAStools Wrapper Functions from R&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;I primarily use &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt; for scientific computing, but also dabble in &lt;a href=&#34;https://www.gnu.org/software/bash/&#34;&gt;bash&lt;/a&gt;, and use &lt;a href=&#34;https://en.wikipedia.org/wiki/SQL&#34;&gt;SQL&lt;/a&gt; a fair bit for spatial stuff, working from &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt;/&lt;a href=&#34;https://postgis.net/&#34;&gt;PostGIS&lt;/a&gt; databases.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll disclaim that I have limited formal training in coding, but have been really fortunate for opportunities to improve my skills through a few opportunities I&amp;rsquo;d encourage others to look into. First, in 2014 I attended a joint &lt;a href=&#34;https://www.nceas.ucsb.edu/&#34;&gt;NCEAS&lt;/a&gt;/&lt;a href=&#34;http://renci.org/&#34;&gt;RENCI&lt;/a&gt; Open Science for Synthesis session, focused in training early career scientists useful computing tools to allow for reproducible research. This was a 3-week intensive course that covered a lot, and got me comfortable using some valuable and common tools of the trade. I&amp;rsquo;d highly recommend this to others.&lt;/p&gt;
+
+&lt;p&gt;Also, during my Postdoc at the University of Tulsa, I was able to engage in the emerging &lt;a href=&#34;https://software-carpentry.org/&#34;&gt;Software Carpentry&lt;/a&gt; community at Oklahoma State University. Software Carpentry (and the sibling &lt;a href=&#34;http://www.datacarpentry.org/&#34;&gt;Data Carpentry&lt;/a&gt;) is dedicated to teaching researchers computing skills to be more efficient and conduct reproducible research. They offer courses in a variety of tools, including Git, R, Python, Bash, and SQL, among others. Furthermore, they have a strong emphasis on pedagogy, using tried and true principles with the learners. If you are new to coding and have an opportunity, I highly recommend workshops from the Carpentries.&lt;/p&gt;
+
+&lt;p&gt;Below I&amp;rsquo;ve listed a few things I&amp;rsquo;ve worked on, which I hope others might find useful. My code can largely be found on two GitHub accounts; &lt;a href=&#34;https://github.com/mltConsEcol&#34;&gt;mltConsEcol&lt;/a&gt; is set up more for collaboration and such, and &lt;a href=&#34;https://github.com/mtreg/&#34;&gt;mtreg&lt;/a&gt; is generally for smaller, one-off types of projects.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-ibuttons-a-ibutton-data-organizer&#34;&gt;&lt;a name=&#34;ibuttons&#34;&gt;&lt;/a&gt;iButton Data Organizer&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.maximintegrated.com/en/products/digital/ibutton.html&#34;&gt;iButtons&lt;/a&gt; are temperature and/or humidity loggers commonly used in environmental monitoring. However, using the readily-available tools, synchronizing the timing of data collection across multiple iButtons is not necessarily easy, though it&amp;rsquo;s necessary to line up timestamps for easy comparison and further analysis/processing.  Thus, as part of work from my Postdoc, I put together a bunch of R code to allow for easier processing. It&amp;rsquo;s currently available as an &lt;a href=&#34;https://github.com/mltConsEcol/iButtonDataOrganizer&#34;&gt;R package via GitHub&lt;/a&gt;. See the package page on GitHub for installation instructions.  I&amp;rsquo;m not currently using iButtons, so have not been further developing the package, but reach out with questions or post an issue via GitHub.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-netcdf-a-netcdf-data-access&#34;&gt;&lt;a name=&#34;netcdf&#34;&gt;&lt;/a&gt;NetCDF Data Access&lt;/h2&gt;
+
+&lt;p&gt;Some of the datasets I use are distributed as NetCDF files, which can be complex, involving multiple strata of data (e.g., multiple depths in the ocean) and with many time points.  As of this writing, two main datasets I&amp;rsquo;ve worked with are the &lt;a href=&#34;http://hudson.dl.stevens-tech.edu/maritimeforecast/&#34;&gt;NY Harbor Observation and Prediction System (NYHOPS)&lt;/a&gt; and &lt;a href=&#34;http://www.scrimhub.org/resources/topowx/&#34;&gt;TopoWx (TopoWeather)&lt;/a&gt;. Thus, you can find some code I&amp;rsquo;ve developed for accessing these data on &lt;a href=&#34;https://github.com/mltConsEcol/misc_netCDF_access&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: this will likely not work on Windows due to lacking dependencies for the ncdf4 package. I tend to set up a Linux virtual machine via &lt;a href=&#34;https://www.virtualbox.org&#34;&gt;VirtualBox&lt;/a&gt; for this work.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-lastools-a-lastools-wrapper-functions-from-r&#34;&gt;&lt;a name=&#34;lastools&#34;&gt;&lt;/a&gt;LAStools Wrapper Functions from R&lt;/h2&gt;
+
+&lt;p&gt;In the past I&amp;rsquo;ve done some pre-processing of LiDAR data for the state of Oklahoma, and set up some R code to functionally script some things from R using a powerful software package, &lt;a href=&#34;https://rapidlasso.com/lastools/&#34;&gt;LAStools&lt;/a&gt;. The code is simply set up as R functions within a &lt;a href=&#34;https://github.com/mltConsEcol/OK_LiDAR_Processing&#34;&gt;GitHub Repository&lt;/a&gt;, largely to check, and organize metadata, and correct projection information. Realizing how prevalent LiDAR data has become, I&amp;rsquo;d be happy for others to use the code as-is, if helpful, or build off of it (and if you do, please reach out to me).&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -56,8 +283,20 @@ I&amp;rsquo;ll disclaim that I have limited formal training in coding, but have 
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/contact/</guid>
-      <description>E-mail Work: michael.treglia(at)tnc.org  Personal: mtreglia(at)gmail.com
-Mailing Address Michael Treglia  The Nature Conservancy  322 8th Ave, 16th Floor  New York, NY 10001</description>
+      <description>
+
+&lt;h3 id=&#34;e-mail&#34;&gt;E-mail&lt;/h3&gt;
+
+&lt;p&gt;Work: michael.treglia(at)tnc.org &lt;br/&gt;
+Personal: mtreglia(at)gmail.com&lt;/p&gt;
+
+&lt;h3 id=&#34;mailing-address&#34;&gt;Mailing Address&lt;/h3&gt;
+
+&lt;p&gt;Michael Treglia &lt;br/&gt;
+The Nature Conservancy &lt;br/&gt;
+322 8th Ave, 16th Floor &lt;br/&gt;
+New York, NY 10001 &lt;br/&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -66,7 +305,154 @@ Mailing Address Michael Treglia  The Nature Conservancy  322 8th Ave, 16th Floor
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/photography/</guid>
-      <description>‹ › ×    Photography is a hobby and a passion for me. I try to take my camera on various travels, hikes, and when I get time with my family (especially for photos of the nephew and the dog). Here is a selection of some of my favorites, hosted via the open source blueimp gallery scripts, and feel free to check out my Instagram feed.</description>
+      <description>
+
+&lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;css/blueimp-gallery.min.css&#34;&gt;&lt;/p&gt;
+
+&lt;!-- The Gallery as lightbox dialog, should be a child element of the document body --&gt;
+
+&lt;div id=&#34;blueimp-gallery&#34; class=&#34;blueimp-gallery blueimp-gallery-controls&#34;&gt;
+    &lt;div class=&#34;slides&#34;&gt;&lt;/div&gt;
+    &lt;h3 class=&#34;title&#34;&gt;&lt;/h3&gt;
+    &lt;a class=&#34;prev&#34;&gt;‹&lt;/a&gt;
+    &lt;a class=&#34;next&#34;&gt;›&lt;/a&gt;
+    &lt;a class=&#34;close&#34;&gt;×&lt;/a&gt;
+    &lt;a class=&#34;play-pause&#34;&gt;&lt;/a&gt;
+    &lt;ol class=&#34;indicator&#34;&gt;&lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Photography is a hobby and a passion for me. I try to take my camera on various travels, hikes, and when I get  time with my family (especially for photos of the nephew and the dog). Here is a selection of some of my favorites, hosted via the open source &lt;a href=&#34;https://github.com/blueimp/Gallery/&#34;&gt;blueimp gallery&lt;/a&gt; scripts, and feel free to check out my &lt;a href=&#34;https://www.instagram.com/m1ketreglia/&#34;&gt;Instagram feed&lt;/a&gt;. All photos are presented here copyrighted. If you are interested in prints, or using any of my photos publicly, on another website, etc., please reach out to me.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;#norway2018&#34;&gt;Bergen, Norway - 2018&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;script-src-js-blueimp-gallery-min-js-script&#34;&gt;&lt;script src=&#34;js/blueimp-gallery.min.js&#34;&gt;&lt;/script&gt;&lt;/h1&gt;
+
+&lt;script src=&#34;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;js/jquery.blueimp-gallery.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;a-name-norway2018-a-bergen-norway-2018&#34;&gt;&lt;a name=&#34;norway2018&#34;&gt;&lt;/a&gt;Bergen, Norway - 2018&lt;/h2&gt;
+
+&lt;div id=&#34;norway&#34;&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_009.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_009.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_027.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_027.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_031.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_031.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_043.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_043.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_044.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_044.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_103.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_103.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_128.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_128.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_145.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_145.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_150.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_150.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_154.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_154.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_204.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_204.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_206.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_206.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_230.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_230.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_240.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_240.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_259.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_259.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_276.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_276.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_282.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_282.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_304.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_304.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_317.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_317.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_322.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_322.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_338.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_338.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_347.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_347.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_351.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_351.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_401.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_401.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_466.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_466.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_478.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_478.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_483.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_483.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_492.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_492.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_500.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_500.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_516.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_516.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_572.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_572.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_579.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_579.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_595.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_595.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_614.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_614.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_622.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_622.jpg&#34;&gt;
+    &lt;/a&gt;
+
+    
+&lt;/div&gt;
+
+&lt;script&gt;
+document.getElementById(&#39;links&#39;).onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName(&#39;a&#39;);
+    blueimp.Gallery(links, options);
+};
+&lt;/script&gt;
+</description>
     </item>
     
     <item>
@@ -75,8 +461,77 @@ Mailing Address Michael Treglia  The Nature Conservancy  322 8th Ave, 16th Floor
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/research/</guid>
-      <description>Click here for a list of my publicationsClick here for my complete CV
-Current Work My current work is broadly focused on using statistical and and GIS tools to inform conservation efforts. Working for The Nature Conservancy in New York City, I using available remote sensing data and GIS datasets to characterize open space dynamics, understand how connected wildlife populations might be across the city, and map previously-unmapped assets, like green roofs.</description>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;#publications&#34;&gt;Click here for a list of my publications&lt;/a&gt;&lt;br/&gt;&lt;a href=&#34;../about/treglia_cv_20180107_norefs.pdf&#34;&gt;Click here for my complete CV&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;current-work&#34;&gt;Current Work&lt;/h3&gt;
+
+&lt;p&gt;My current work is broadly focused on using statistical and and GIS tools to inform conservation efforts. Working for The Nature Conservancy in New York City, I using available remote sensing data and GIS datasets to characterize open space dynamics, understand how connected wildlife populations might be across the city, and map previously-unmapped assets, like green roofs.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;postdoc-research&#34;&gt;Postdoc Research&lt;/h3&gt;
+
+&lt;p&gt;My main research at the University of Tulsa was focused on understanding how life history traits of amphibians may play into effects of climate change. I also worked with a student on understanding the potential changes of Juniper trees across the continental U.S., and was involved in processing LiDAR data for researchers across the state.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;dissertation-research&#34;&gt;Dissertation Research&lt;/h3&gt;
+
+&lt;p&gt;My dissertation research  focused on the endagered arroyo toad (&lt;i&gt;Anaxyrus californicus&lt;/i&gt;), endemic to southern California, USA, and northern Baja California, MX. I studied  how the species&amp;rsquo; distribution may have changed in a portion of its range, and how alterations to land cover patterns are influencing such changes. In this research I used a combination of presence-only and presence/absence species distribution modeling approaches, remote sensing and landscape analysis techniques, and path analysis to understand how watershed-scale changes are influencing habitat critical for arroyo toads, in and along streams.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;masters-research&#34;&gt;Masters Research&lt;/h3&gt;
+
+&lt;p&gt;My Masters research was focused on the St. Croix Ground Lizard (&lt;i&gt;Ameiva polops&lt;/i&gt;), an endangered lizard that is endemic to St. Croix, US Virgin Islands. The species is extirpated from the main island of St. Croix due to predation by invasive mongooses, and remains on small islands off the coast of St. Croix. With the National Park Service and U.S. Fish and Wildlife Service we translocated the species from Green Cay National Wildlife Refuge to Buck Island Reef National Monument. The  St. Croix Ground Lizard was presumably present there until the arrival of mongooses, which were eradicated there by the mid 1990s. &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;We translocated 57 lizards and housed them on Buck Island in a series of 10m x 10m open enclosures (at a density of 700/hectare). The lizards were released to the rest of the island after 9 weeks. The period during which they were enclosed was used to determine detection probability of the species, and to assess the impact of their presence on their invertebrate prey base.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;earlier-work&#34;&gt;Earlier work&lt;/h3&gt;
+
+&lt;p&gt;&lt;b&gt;Invasion of &lt;i&gt;Anolis sagrei&lt;/i&gt; on St. Vincent, West Indies&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+During a Research Experience for Undergraduates with Dr. Robert Powell at Avila University, I studied the invasion of the Cuban Brown Anole &lt;i&gt;Anolis sagrei&lt;/i&gt; on St. Vincent. This species has been dispersed throughout much of the tropical world by accidental transport with building materials. Our study focused on the&lt;br /&gt;
+potential impacts that the species has on native Anoles in St. Vincent. We did not see any definitive effects, though our data suggest that in the presence of &lt;i&gt;Anolis sagrei&lt;/i&gt;, the native &lt;i&gt;Anolis trinitatis&lt;/i&gt; may increase its perch height.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;a-name-publications-a-publications&#34;&gt;&lt;a name=&#34;publications&#34;&gt;&lt;/a&gt;Publications&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, R.N. Fisher, and L.A. Fitzgerald. 2015. Integrating Multiple Distribution Models to Guide Conservation Efforts of an Endangered Toad. &lt;i&gt;PLoS ONE&lt;/i&gt; DOI: 10.1371/journal.pone.0131628. &lt;a href=&#34;Treglia_etal2015_PLoSONE_ATDistributionModel.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; (Journal Website: &lt;a href=&#34;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131628&#34; target=&#34;_About&#34;&gt;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131628&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Fitzgerald, L.A., &lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, Angeli, N., Hibbitts, T.J., Leavitt, D.J., Subalusky, A.L., Lundgren, I. &amp; Hillis-Starr, Z. 2015. Determinants of successful establishment and post-translocation dispersal of a new population of the critically endangered St. Croix ground lizard (&lt;i&gt;Ameiva polops&lt;/i&gt;). &lt;i&gt;Restoration Ecology&lt;/i&gt; DOI: 10.1111/rec.12248. (Journal Website: &lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/rec.12248/abstract&#34; target=&#34;_About&#34;&gt;http://onlinelibrary.wiley.com/doi/10.1111/rec.12248/abstract&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Wang, H.-H., C.L. Wonkka, &lt;strong&gt;M.L. Treglia&lt;/strong&gt;, W.E. Grant, F.E. Smeins, W.E. Rogers. 2015. Species distribution modeling for conservation of an endangered and endemic orchid. &lt;i&gt;AoB Plants&lt;/i&gt; DOI: 10.1093/aobpla/plv039. &lt;a href=&#34;Wang_etal2015_AoBPlants_LadiesTresses.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; (Journal Website: &lt;a href=&#34;http://aobpla.oxfordjournals.org/content/7/plv039&#34; target=&#34;_About&#34;&gt;http://aobpla.oxfordjournals.org/content/7/plv039&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, J. Valiulis, D. J. Leavitt, and L.A. Fitzgerald. 2013. Establishment of the Puerto Rican Ground Lizard (&lt;i&gt;Ameiva exsul&lt;/i&gt;: Teiidae), on St. Croix, U.S. Virgin Islands: a threat to native fauna. &lt;i&gt;Caribbean Journal of Science&lt;/i&gt; 47(2-3). &lt;a href=&#34;Treglia_etal2013_CaribJSci_Ameiva_exsul.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; (Journal Website: &lt;a href=&#34;http://caribjsci.org/.org&#34;&gt;http://caribjsci.org/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia M.L.&lt;/strong&gt; and L.A. Fitzgerald. 2011. Translocation of the St. Croix ground lizard to Buck Island Reef National Monument, St. Croix, U.S. Virgin Islands. Pp. 109-115. In. Soorae P.S. (ed.) (2011). &lt;i&gt;Global Re-introduction Perspectives: 2011. More case studies from around the globe&lt;/i&gt;. Gland, Switzerland: IUCN/SSC Re-introduction Specialist Group and Abu Dhabi, UAE: Environment Agency-Abu Dhabi. Xiv +250 pp. &lt;a href=&#34;TregliaFitzgerald2011_RSGBook_Ameiva_polops.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt;  (&lt;a href=&#34;http://www.iucnsscrsg.org/index.php?option=com_content&amp;view=article&amp;id=192&amp;Itemid=587&#34;&gt;Click Here for a Link to the Full Book&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, O. Ramirez. 2009. &lt;i&gt;Nerodia rhombifer&lt;/i&gt;. Geographic distribution. &lt;i&gt;Herpetological Review&lt;/i&gt; 40(2):238.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt; 2008. Kraig Adler:
+A lifetime promoting herpetology. &lt;i&gt;Iguana&lt;/i&gt; 15(4):234&amp;ndash;237.&lt;a href=&#34;Treglia-AdlerProfile.pdf&#34;&gt;&lt;strong&gt; PDF&lt;/strong&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, A.J. Muensch, R.
+Powell, and J.S. Parmerlee, Jr. 2008. An invasive anole: &lt;i&gt;Anolis
+sagrei&lt;/i&gt; on St. Vincent and its potential impact on native
+anoles. &lt;i&gt;Caribbean Journal of Science&lt;/i&gt; 44(2):251-256. &lt;a href=&#34;Treglia_etal2008_CaribJSci_Anolis_sagrei.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Henderson,R.W., &lt;strong&gt;M.L. Treglia&lt;/strong&gt;,
+and S.D. Powell. 2007. &lt;i&gt;Corallus cookii&lt;/i&gt;. Foraging.
+&lt;i&gt;Herpetological Review&lt;/i&gt; 38(4):466&lt;/p&gt;
+
+&lt;p&gt;Powell, S. D., &lt;strong&gt;M. L. Treglia&lt;/strong&gt;, R.
+W. Henderson, and R. Powell. 2007. Treeboas in the West Indies:
+Responses of &lt;i&gt;Corallus cookii&lt;/i&gt; and &lt;i&gt;C.
+grenadensis&lt;/i&gt; to disturbed habitats. In: R. W. Henderson and
+R.Powell (eds.). &lt;i&gt;Biology of the Boas and Pythons&lt;/i&gt;. Eagle Mountain Publ.,
+Eagle Mountain, Utah.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt; 2006. An annotated
+checklist of the amphibians and reptiles of St. Vincent, West Indies.
+&lt;i&gt;Iguana&lt;/i&gt; 13(4):252&amp;ndash;263. &lt;strong&gt;&lt;a href=&#34;Treglia_Iguana13.4_252_263.pdf&#34; =&#34;&#34;&gt;PDF&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -85,8 +540,23 @@ Current Work My current work is broadly focused on using statistical and and GIS
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/</guid>
-      <description>QGIS Tutorial QGIS is a well-developed, open source GIS program, with a wide range of features and great compatability with numerous formats. Furthermore, basic installation includes linkages with other open source GIS tools such as GRASS GIS and SAGA (among others). It is one primary software packages that I use in research and teach in classes.
-This tutorial is designed to familiarize GIS users with the general layout, features and tools of QGIS, through working with sample datasets that are provided.</description>
+      <description>
+
+&lt;h3 id=&#34;a-href-http-mltconsecol-github-io-qgis-tutorial-target-about-qgis-tutorial-a&#34;&gt;&lt;a href=&#34;http://mltconsecol.github.io/QGIS-Tutorial/&#34;target=&#34;_About&#34;&gt;QGIS Tutorial&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.qgis.org&#34; target=&#34;_About&#34;&gt;QGIS&lt;/a&gt; is a well-developed, open source GIS program, with a wide range of features and great compatability with numerous formats. Furthermore, basic installation includes linkages with other open source GIS tools such as &lt;a href=&#34;https://grass.osgeo.org/&#34; target=&#34;_About&#34;&gt;GRASS GIS&lt;/a&gt; and &lt;a href=&#34;http://saga-gis.org/&#34; target=&#34;_About&#34;&gt;SAGA&lt;/a&gt; (among others). It is one primary software packages that I use in research and teach in classes.&lt;/p&gt;
+
+&lt;p&gt;This tutorial is designed to familiarize GIS users with the general layout, features and tools of QGIS, through working with sample datasets that are provided. It begins with import and projection of spatial data (for vector and raster datasets), goes into some geoprocessing steps, and finishes up with producing and exporting a map. This material was originally developed for a workshop at Texas A&amp;amp;M University,though I update it periodically for a class I taught at the University of Tulsa. It was most recently updated for QGIS v. 2.12.2 (13 Jan 2016),and is generally relevant for 2.x versions.&lt;/p&gt;
+
+&lt;h3 id=&#34;a-href-http-mltconsecol-github-io-tu-landscapeanalysis-documents-target-about-landscape-analysis-and-modeling-a&#34;&gt;&lt;a href=&#34;http://mltconsecol.github.io/TU_LandscapeAnalysis_Documents&#34;target=&#34;_About&#34;&gt;Landscape Analysis and Modeling&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;At the &lt;a href=&#34;http://www.utulsa.edu&#34; target=&#34;_About&#34;&gt;University of Tulsa&lt;/a&gt;, I taught a course called &amp;ldquo;Landscape Analysis and Modeling&amp;rdquo;, which covers a bit of basic GIS and statistics, and goes into a variety of spatial analyses. It is designed to familiarize students with landscape ecological techniques and tools, which they may employ in their own projects. All labs take advantage of freely available software including &lt;a href=&#34;http://www.qgis.org&#34; target=&#34;_About&#34;&gt;QGIS&lt;/a&gt;, &lt;a href=&#34;http://cran.us.r-project.org/&#34; target=&#34;_About&#34;&gt;R&lt;/a&gt;,  &lt;a href=&#34;http://www.passagesoftware.net/&#34; target=&#34;_About&#34;&gt;Passage&lt;/a&gt;, and &lt;a href=&#34;http://www.umass.edu/landeco/research/fragstats/fragstats.html&#34; target=&#34;_About&#34;&gt;Fragstats&lt;/a&gt;, and most use publically available datasets, to effectively present tutorals on various topics. The syllabus from last time the class was offered is available &lt;a href=&#34;./LandscapeAnalysis_Syllabus.pdf&#34; target=&#34;_About&#34;&gt;here&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;
+I make lab materials for this course freely available on a public course website (above), and in the form of a &lt;a href=&#34;https://github.com/&#34; target=&#34;_About&#34;&gt;GitHub repository&lt;/a&gt;. Though these materials accompany related lectures in the class (not publically available at the current time), they should be generally useful for people interested in learning about spatial analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;The above materials were originally developed with support from the &lt;a href=&#34;http://www.okepscor.org/&#34; target=&#34;_About&#34;&gt;Oklahoma NSF-EPSCoR Program&lt;/a&gt; (Grant IIA-1301789).&lt;/em&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -9,7 +9,7 @@
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/photography/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/photography/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,154 @@
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/photography/</guid>
-      <description>‹ › ×    Photography is a hobby and a passion for me. I try to take my camera on various travels, hikes, and when I get time with my family (especially for photos of the nephew and the dog). Here is a selection of some of my favorites, hosted via the open source blueimp gallery scripts, and feel free to check out my Instagram feed.</description>
+      <description>
+
+&lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;css/blueimp-gallery.min.css&#34;&gt;&lt;/p&gt;
+
+&lt;!-- The Gallery as lightbox dialog, should be a child element of the document body --&gt;
+
+&lt;div id=&#34;blueimp-gallery&#34; class=&#34;blueimp-gallery blueimp-gallery-controls&#34;&gt;
+    &lt;div class=&#34;slides&#34;&gt;&lt;/div&gt;
+    &lt;h3 class=&#34;title&#34;&gt;&lt;/h3&gt;
+    &lt;a class=&#34;prev&#34;&gt;‹&lt;/a&gt;
+    &lt;a class=&#34;next&#34;&gt;›&lt;/a&gt;
+    &lt;a class=&#34;close&#34;&gt;×&lt;/a&gt;
+    &lt;a class=&#34;play-pause&#34;&gt;&lt;/a&gt;
+    &lt;ol class=&#34;indicator&#34;&gt;&lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Photography is a hobby and a passion for me. I try to take my camera on various travels, hikes, and when I get  time with my family (especially for photos of the nephew and the dog). Here is a selection of some of my favorites, hosted via the open source &lt;a href=&#34;https://github.com/blueimp/Gallery/&#34;&gt;blueimp gallery&lt;/a&gt; scripts, and feel free to check out my &lt;a href=&#34;https://www.instagram.com/m1ketreglia/&#34;&gt;Instagram feed&lt;/a&gt;. All photos are presented here copyrighted. If you are interested in prints, or using any of my photos publicly, on another website, etc., please reach out to me.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;#norway2018&#34;&gt;Bergen, Norway - 2018&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;script-src-js-blueimp-gallery-min-js-script&#34;&gt;&lt;script src=&#34;js/blueimp-gallery.min.js&#34;&gt;&lt;/script&gt;&lt;/h1&gt;
+
+&lt;script src=&#34;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;js/jquery.blueimp-gallery.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;a-name-norway2018-a-bergen-norway-2018&#34;&gt;&lt;a name=&#34;norway2018&#34;&gt;&lt;/a&gt;Bergen, Norway - 2018&lt;/h2&gt;
+
+&lt;div id=&#34;norway&#34;&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_009.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_009.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_027.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_027.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_031.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_031.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_043.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_043.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_044.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_044.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_103.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_103.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_128.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_128.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_145.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_145.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_150.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_150.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_154.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_154.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_204.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_204.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_206.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_206.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_230.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_230.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_240.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_240.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_259.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_259.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_276.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_276.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_282.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_282.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_304.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_304.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_317.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_317.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_322.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_322.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_338.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_338.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_347.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_347.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_351.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_351.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_401.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_401.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_466.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_466.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_478.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_478.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_483.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_483.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_492.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_492.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_500.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_500.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_516.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_516.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_572.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_572.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_579.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_579.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_595.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_595.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180114_614.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_614.jpg&#34;&gt;
+    &lt;/a&gt;    
+    &lt;a href=&#34;images/Bergen_Norway_20180114_622.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_622.jpg&#34;&gt;
+    &lt;/a&gt;
+
+    
+&lt;/div&gt;
+
+&lt;script&gt;
+document.getElementById(&#39;links&#39;).onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName(&#39;a&#39;);
+    blueimp.Gallery(links, options);
+};
+&lt;/script&gt;
+</description>
     </item>
     
   </channel>

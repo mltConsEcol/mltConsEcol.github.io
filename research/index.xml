@@ -9,7 +9,7 @@
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/research/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/research/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,8 +18,77 @@
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/research/</guid>
-      <description>Click here for a list of my publicationsClick here for my complete CV
-Current Work My current work is broadly focused on using statistical and and GIS tools to inform conservation efforts. Working for The Nature Conservancy in New York City, I using available remote sensing data and GIS datasets to characterize open space dynamics, understand how connected wildlife populations might be across the city, and map previously-unmapped assets, like green roofs.</description>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;#publications&#34;&gt;Click here for a list of my publications&lt;/a&gt;&lt;br/&gt;&lt;a href=&#34;../about/treglia_cv_20180107_norefs.pdf&#34;&gt;Click here for my complete CV&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;current-work&#34;&gt;Current Work&lt;/h3&gt;
+
+&lt;p&gt;My current work is broadly focused on using statistical and and GIS tools to inform conservation efforts. Working for The Nature Conservancy in New York City, I using available remote sensing data and GIS datasets to characterize open space dynamics, understand how connected wildlife populations might be across the city, and map previously-unmapped assets, like green roofs.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;postdoc-research&#34;&gt;Postdoc Research&lt;/h3&gt;
+
+&lt;p&gt;My main research at the University of Tulsa was focused on understanding how life history traits of amphibians may play into effects of climate change. I also worked with a student on understanding the potential changes of Juniper trees across the continental U.S., and was involved in processing LiDAR data for researchers across the state.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;dissertation-research&#34;&gt;Dissertation Research&lt;/h3&gt;
+
+&lt;p&gt;My dissertation research  focused on the endagered arroyo toad (&lt;i&gt;Anaxyrus californicus&lt;/i&gt;), endemic to southern California, USA, and northern Baja California, MX. I studied  how the species&amp;rsquo; distribution may have changed in a portion of its range, and how alterations to land cover patterns are influencing such changes. In this research I used a combination of presence-only and presence/absence species distribution modeling approaches, remote sensing and landscape analysis techniques, and path analysis to understand how watershed-scale changes are influencing habitat critical for arroyo toads, in and along streams.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;masters-research&#34;&gt;Masters Research&lt;/h3&gt;
+
+&lt;p&gt;My Masters research was focused on the St. Croix Ground Lizard (&lt;i&gt;Ameiva polops&lt;/i&gt;), an endangered lizard that is endemic to St. Croix, US Virgin Islands. The species is extirpated from the main island of St. Croix due to predation by invasive mongooses, and remains on small islands off the coast of St. Croix. With the National Park Service and U.S. Fish and Wildlife Service we translocated the species from Green Cay National Wildlife Refuge to Buck Island Reef National Monument. The  St. Croix Ground Lizard was presumably present there until the arrival of mongooses, which were eradicated there by the mid 1990s. &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;We translocated 57 lizards and housed them on Buck Island in a series of 10m x 10m open enclosures (at a density of 700/hectare). The lizards were released to the rest of the island after 9 weeks. The period during which they were enclosed was used to determine detection probability of the species, and to assess the impact of their presence on their invertebrate prey base.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;earlier-work&#34;&gt;Earlier work&lt;/h3&gt;
+
+&lt;p&gt;&lt;b&gt;Invasion of &lt;i&gt;Anolis sagrei&lt;/i&gt; on St. Vincent, West Indies&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+During a Research Experience for Undergraduates with Dr. Robert Powell at Avila University, I studied the invasion of the Cuban Brown Anole &lt;i&gt;Anolis sagrei&lt;/i&gt; on St. Vincent. This species has been dispersed throughout much of the tropical world by accidental transport with building materials. Our study focused on the&lt;br /&gt;
+potential impacts that the species has on native Anoles in St. Vincent. We did not see any definitive effects, though our data suggest that in the presence of &lt;i&gt;Anolis sagrei&lt;/i&gt;, the native &lt;i&gt;Anolis trinitatis&lt;/i&gt; may increase its perch height.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;a-name-publications-a-publications&#34;&gt;&lt;a name=&#34;publications&#34;&gt;&lt;/a&gt;Publications&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, R.N. Fisher, and L.A. Fitzgerald. 2015. Integrating Multiple Distribution Models to Guide Conservation Efforts of an Endangered Toad. &lt;i&gt;PLoS ONE&lt;/i&gt; DOI: 10.1371/journal.pone.0131628. &lt;a href=&#34;Treglia_etal2015_PLoSONE_ATDistributionModel.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; (Journal Website: &lt;a href=&#34;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131628&#34; target=&#34;_About&#34;&gt;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131628&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Fitzgerald, L.A., &lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, Angeli, N., Hibbitts, T.J., Leavitt, D.J., Subalusky, A.L., Lundgren, I. &amp; Hillis-Starr, Z. 2015. Determinants of successful establishment and post-translocation dispersal of a new population of the critically endangered St. Croix ground lizard (&lt;i&gt;Ameiva polops&lt;/i&gt;). &lt;i&gt;Restoration Ecology&lt;/i&gt; DOI: 10.1111/rec.12248. (Journal Website: &lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/rec.12248/abstract&#34; target=&#34;_About&#34;&gt;http://onlinelibrary.wiley.com/doi/10.1111/rec.12248/abstract&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Wang, H.-H., C.L. Wonkka, &lt;strong&gt;M.L. Treglia&lt;/strong&gt;, W.E. Grant, F.E. Smeins, W.E. Rogers. 2015. Species distribution modeling for conservation of an endangered and endemic orchid. &lt;i&gt;AoB Plants&lt;/i&gt; DOI: 10.1093/aobpla/plv039. &lt;a href=&#34;Wang_etal2015_AoBPlants_LadiesTresses.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; (Journal Website: &lt;a href=&#34;http://aobpla.oxfordjournals.org/content/7/plv039&#34; target=&#34;_About&#34;&gt;http://aobpla.oxfordjournals.org/content/7/plv039&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, J. Valiulis, D. J. Leavitt, and L.A. Fitzgerald. 2013. Establishment of the Puerto Rican Ground Lizard (&lt;i&gt;Ameiva exsul&lt;/i&gt;: Teiidae), on St. Croix, U.S. Virgin Islands: a threat to native fauna. &lt;i&gt;Caribbean Journal of Science&lt;/i&gt; 47(2-3). &lt;a href=&#34;Treglia_etal2013_CaribJSci_Ameiva_exsul.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; (Journal Website: &lt;a href=&#34;http://caribjsci.org/.org&#34;&gt;http://caribjsci.org/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia M.L.&lt;/strong&gt; and L.A. Fitzgerald. 2011. Translocation of the St. Croix ground lizard to Buck Island Reef National Monument, St. Croix, U.S. Virgin Islands. Pp. 109-115. In. Soorae P.S. (ed.) (2011). &lt;i&gt;Global Re-introduction Perspectives: 2011. More case studies from around the globe&lt;/i&gt;. Gland, Switzerland: IUCN/SSC Re-introduction Specialist Group and Abu Dhabi, UAE: Environment Agency-Abu Dhabi. Xiv +250 pp. &lt;a href=&#34;TregliaFitzgerald2011_RSGBook_Ameiva_polops.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt;  (&lt;a href=&#34;http://www.iucnsscrsg.org/index.php?option=com_content&amp;view=article&amp;id=192&amp;Itemid=587&#34;&gt;Click Here for a Link to the Full Book&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, O. Ramirez. 2009. &lt;i&gt;Nerodia rhombifer&lt;/i&gt;. Geographic distribution. &lt;i&gt;Herpetological Review&lt;/i&gt; 40(2):238.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt; 2008. Kraig Adler:
+A lifetime promoting herpetology. &lt;i&gt;Iguana&lt;/i&gt; 15(4):234&amp;ndash;237.&lt;a href=&#34;Treglia-AdlerProfile.pdf&#34;&gt;&lt;strong&gt; PDF&lt;/strong&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, A.J. Muensch, R.
+Powell, and J.S. Parmerlee, Jr. 2008. An invasive anole: &lt;i&gt;Anolis
+sagrei&lt;/i&gt; on St. Vincent and its potential impact on native
+anoles. &lt;i&gt;Caribbean Journal of Science&lt;/i&gt; 44(2):251-256. &lt;a href=&#34;Treglia_etal2008_CaribJSci_Anolis_sagrei.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Henderson,R.W., &lt;strong&gt;M.L. Treglia&lt;/strong&gt;,
+and S.D. Powell. 2007. &lt;i&gt;Corallus cookii&lt;/i&gt;. Foraging.
+&lt;i&gt;Herpetological Review&lt;/i&gt; 38(4):466&lt;/p&gt;
+
+&lt;p&gt;Powell, S. D., &lt;strong&gt;M. L. Treglia&lt;/strong&gt;, R.
+W. Henderson, and R. Powell. 2007. Treeboas in the West Indies:
+Responses of &lt;i&gt;Corallus cookii&lt;/i&gt; and &lt;i&gt;C.
+grenadensis&lt;/i&gt; to disturbed habitats. In: R. W. Henderson and
+R.Powell (eds.). &lt;i&gt;Biology of the Boas and Pythons&lt;/i&gt;. Eagle Mountain Publ.,
+Eagle Mountain, Utah.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt; 2006. An annotated
+checklist of the amphibians and reptiles of St. Vincent, West Indies.
+&lt;i&gt;Iguana&lt;/i&gt; 13(4):252&amp;ndash;263. &lt;strong&gt;&lt;a href=&#34;Treglia_Iguana13.4_252_263.pdf&#34; =&#34;&#34;&gt;PDF&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>
