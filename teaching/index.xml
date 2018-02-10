@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teachings on Mike Treglia</title>
-    <link>https://mltconsecol.github.io/teaching/</link>
+    <link>/teaching/</link>
     <description>Recent content in Teachings on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://mltconsecol.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/teaching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Teaching</title>
-      <link>https://mltconsecol.github.io/teaching/</link>
+      <link>/teaching/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/teaching/</guid>
+      <guid>/teaching/</guid>
       <description>
 
 &lt;h3 id=&#34;a-href-http-mltconsecol-github-io-qgis-tutorial-target-about-qgis-tutorial-a&#34;&gt;&lt;a href=&#34;http://mltconsecol.github.io/QGIS-Tutorial/&#34;target=&#34;_About&#34;&gt;QGIS Tutorial&lt;/a&gt;&lt;/h3&gt;
