@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mike Treglia</title>
-    <link>/</link>
+    <link>https://mltconsecol.github.io</link>
     <description>Recent content on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -14,7 +14,7 @@
     
     <item>
       <title>Getting Going with Blogdown &amp; Hugo</title>
-      <link>/post/20170123_blogdown_hugo/</link>
+      <link>https://mltconsecol.github.io</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/20170123_blogdown_hugo/</guid>
@@ -192,7 +192,7 @@ ignoreFiles = [&amp;quot;\\.Rmd$&amp;quot;, &amp;quot;\\.Rmarkdown$&amp;quot;, &
     
     <item>
       <title>Time for a Website Makeover</title>
-      <link>/post/time-for-webpage-update/</link>
+      <link>https://mltconsecol.github.io</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/time-for-webpage-update/</guid>
@@ -208,7 +208,7 @@ ignoreFiles = [&amp;quot;\\.Rmd$&amp;quot;, &amp;quot;\\.Rmarkdown$&amp;quot;, &
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>https://mltconsecol.github.io</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
@@ -240,7 +240,7 @@ Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix G
     
     <item>
       <title>Code</title>
-      <link>/code/</link>
+      <link>https://mltconsecol.github.io</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/code/</guid>
@@ -279,7 +279,7 @@ Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix G
     
     <item>
       <title>Contact</title>
-      <link>/contact/</link>
+      <link>https://mltconsecol.github.io</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/contact/</guid>
@@ -301,7 +301,7 @@ New York, NY 10001 &lt;br/&gt;&lt;/p&gt;
     
     <item>
       <title>Photography</title>
-      <link>/photography/</link>
+      <link>https://mltconsecol.github.io</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/photography/</guid>
@@ -457,7 +457,7 @@ document.getElementById(&#39;links&#39;).onclick = function (event) {
     
     <item>
       <title>Research</title>
-      <link>/research/</link>
+      <link>https://mltconsecol.github.io</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/research/</guid>
@@ -536,7 +536,7 @@ checklist of the amphibians and reptiles of St. Vincent, West Indies.
     
     <item>
       <title>Teaching</title>
-      <link>/teaching/</link>
+      <link>https://mltconsecol.github.io</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/</guid>
