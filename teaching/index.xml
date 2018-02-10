@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teachings on Mike Treglia</title>
-    <link>https://mltconsecol.github.io</link>
+    <link>/teaching/</link>
     <description>Recent content in Teachings on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -14,7 +14,7 @@
     
     <item>
       <title>Teaching</title>
-      <link>https://mltconsecol.github.io</link>
+      <link>/teaching/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/</guid>

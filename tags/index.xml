@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mike Treglia</title>
-    <link>https://mltconsecol.github.io</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -14,7 +14,7 @@
     
     <item>
       <title>Blogdown</title>
-      <link>https://mltconsecol.github.io</link>
+      <link>/tags/blogdown/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/blogdown/</guid>
@@ -23,7 +23,7 @@
     
     <item>
       <title>R</title>
-      <link>https://mltconsecol.github.io</link>
+      <link>/tags/r/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
@@ -32,7 +32,7 @@
     
     <item>
       <title>R Markdown</title>
-      <link>https://mltconsecol.github.io</link>
+      <link>/tags/r-markdown/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/r-markdown/</guid>
@@ -41,7 +41,7 @@
     
     <item>
       <title>Rmd</title>
-      <link>https://mltconsecol.github.io</link>
+      <link>/tags/rmd/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/rmd/</guid>
@@ -50,7 +50,7 @@
     
     <item>
       <title>Web Dev</title>
-      <link>https://mltconsecol.github.io</link>
+      <link>/tags/web-dev/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/web-dev/</guid>

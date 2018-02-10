@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Mike Treglia</title>
-    <link>https://mltconsecol.github.io</link>
+    <link>/tags/r/</link>
     <description>Recent content in R on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -14,7 +14,7 @@
     
     <item>
       <title>Getting Going with Blogdown &amp; Hugo</title>
-      <link>https://mltconsecol.github.io</link>
+      <link>/post/20170123_blogdown_hugo/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/20170123_blogdown_hugo/</guid>
