@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photographies on Mike Treglia</title>
-    <link>/photography/</link>
+    <link>https://mltconsecol.github.io/photography/</link>
     <description>Recent content in Photographies on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/photography/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mltconsecol.github.io/photography/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Photography</title>
-      <link>/photography/</link>
+      <link>https://mltconsecol.github.io/photography/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/photography/</guid>
+      <guid>https://mltconsecol.github.io/photography/</guid>
       <description>
 
 &lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;css/blueimp-gallery.min.css&#34;&gt;&lt;/p&gt;
