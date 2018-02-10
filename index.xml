@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mike Treglia</title>
-    <link>https://mltconsecol.github.io/</link>
+    <link>/</link>
     <description>Recent content on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://mltconsecol.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting Going with Blogdown &amp; Hugo</title>
-      <link>https://mltconsecol.github.io/post/20170123_blogdown_hugo/</link>
+      <link>/post/20170123_blogdown_hugo/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/post/20170123_blogdown_hugo/</guid>
+      <guid>/post/20170123_blogdown_hugo/</guid>
       <description>
 
 &lt;h2 id=&#34;why-blogdown&#34;&gt;Why Blogdown?&lt;/h2&gt;
@@ -192,10 +192,10 @@ ignoreFiles = [&amp;quot;\\.Rmd$&amp;quot;, &amp;quot;\\.Rmarkdown$&amp;quot;, &
     
     <item>
       <title>Time for a Website Makeover</title>
-      <link>https://mltconsecol.github.io/post/time-for-webpage-update/</link>
+      <link>/post/time-for-webpage-update/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/post/time-for-webpage-update/</guid>
+      <guid>/post/time-for-webpage-update/</guid>
       <description>
 
 &lt;h2 id=&#34;time-for-a-change&#34;&gt;Time for a Change&lt;/h2&gt;
@@ -208,10 +208,10 @@ ignoreFiles = [&amp;quot;\\.Rmd$&amp;quot;, &amp;quot;\\.Rmarkdown$&amp;quot;, &
     
     <item>
       <title>About</title>
-      <link>https://mltconsecol.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>
 
 &lt;h3 id=&#34;a-bit-about-me&#34;&gt;A Bit About Me:&lt;/h3&gt;
@@ -230,7 +230,7 @@ Fitzgerald. Dissertation Title: &lt;em&gt;Multi-Scale Conservation in an Altered
 
 &lt;p&gt;Masters of Science (2010) Texas A&amp;amp;M
 University, Department of Wildlife and Fisheries, Advised by Dr. Lee
-Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix Ground Lizard: Analyzing its Detection Probability and Investigating Its Impacts on the Local Prey Base&lt;/em&gt; (&lt;a href=&#34;Treglia 2010_Thesis.pdf&#34;&gt;Click Here to view as a PDF&lt;/a&gt;)&lt;/p&gt;
+Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix Ground Lizard: Analyzing its Detection Probability and Investigating Its Impacts on the Local Prey Base&lt;/em&gt; (&lt;a href=&#34;Treglia2010_Thesis.pdf&#34;&gt;Click Here to view as a PDF&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;Bachelors of Science (2007) Cornell University, Department of Natural Resources.&lt;/p&gt;
 
@@ -240,10 +240,10 @@ Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix G
     
     <item>
       <title>Code</title>
-      <link>https://mltconsecol.github.io/code/</link>
+      <link>/code/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/code/</guid>
+      <guid>/code/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;br/&gt;
@@ -279,10 +279,10 @@ Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix G
     
     <item>
       <title>Contact</title>
-      <link>https://mltconsecol.github.io/contact/</link>
+      <link>/contact/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/contact/</guid>
+      <guid>/contact/</guid>
       <description>
 
 &lt;h3 id=&#34;e-mail&#34;&gt;E-mail&lt;/h3&gt;
@@ -301,10 +301,10 @@ New York, NY 10001 &lt;br/&gt;&lt;/p&gt;
     
     <item>
       <title>Photography</title>
-      <link>https://mltconsecol.github.io/photography/</link>
+      <link>/photography/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/photography/</guid>
+      <guid>/photography/</guid>
       <description>
 
 &lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;css/blueimp-gallery.min.css&#34;&gt;&lt;/p&gt;
@@ -457,10 +457,10 @@ document.getElementById(&#39;links&#39;).onclick = function (event) {
     
     <item>
       <title>Research</title>
-      <link>https://mltconsecol.github.io/research/</link>
+      <link>/research/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/research/</guid>
+      <guid>/research/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;#publications&#34;&gt;Click here for a list of my publications&lt;/a&gt;&lt;br/&gt;&lt;a href=&#34;../about/treglia_cv_20180107_norefs.pdf&#34;&gt;Click here for my complete CV&lt;/a&gt;&lt;/p&gt;
@@ -536,10 +536,10 @@ checklist of the amphibians and reptiles of St. Vincent, West Indies.
     
     <item>
       <title>Teaching</title>
-      <link>https://mltconsecol.github.io/teaching/</link>
+      <link>/teaching/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/teaching/</guid>
+      <guid>/teaching/</guid>
       <description>
 
 &lt;h3 id=&#34;a-href-http-mltconsecol-github-io-qgis-tutorial-target-about-qgis-tutorial-a&#34;&gt;&lt;a href=&#34;http://mltconsecol.github.io/QGIS-Tutorial/&#34;target=&#34;_About&#34;&gt;QGIS Tutorial&lt;/a&gt;&lt;/h3&gt;

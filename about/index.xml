@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Mike Treglia</title>
-    <link>https://mltconsecol.github.io/about/</link>
+    <link>/about/</link>
     <description>Recent content in Abouts on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://mltconsecol.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://mltconsecol.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>
 
 &lt;h3 id=&#34;a-bit-about-me&#34;&gt;A Bit About Me:&lt;/h3&gt;
@@ -36,7 +36,7 @@ Fitzgerald. Dissertation Title: &lt;em&gt;Multi-Scale Conservation in an Altered
 
 &lt;p&gt;Masters of Science (2010) Texas A&amp;amp;M
 University, Department of Wildlife and Fisheries, Advised by Dr. Lee
-Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix Ground Lizard: Analyzing its Detection Probability and Investigating Its Impacts on the Local Prey Base&lt;/em&gt; (&lt;a href=&#34;Treglia 2010_Thesis.pdf&#34;&gt;Click Here to view as a PDF&lt;/a&gt;)&lt;/p&gt;
+Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix Ground Lizard: Analyzing its Detection Probability and Investigating Its Impacts on the Local Prey Base&lt;/em&gt; (&lt;a href=&#34;Treglia2010_Thesis.pdf&#34;&gt;Click Here to view as a PDF&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;Bachelors of Science (2007) Cornell University, Department of Natural Resources.&lt;/p&gt;
 
