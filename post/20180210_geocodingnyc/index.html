@@ -305,13 +305,6 @@
 ## bbox:           xmin: -73.95187 ymin: 40.79249 xmax: -73.95187 ymax: 40.79249
 ## epsg (SRID):    4326
 ## proj4string:    +proj=longlat +datum=WGS84 +no_defs</code></pre>
-<pre><code>## Reading layer `OGRGeoJSON&#39; from data source `https://geosearch.planninglabs.nyc/v1/search?text=1220%20Fifth%20Ave,%20New%20York,%20NY&#39; using driver `GeoJSON&#39;
-## Simple feature collection with 1 feature and 32 fields
-## geometry type:  POINT
-## dimension:      XY
-## bbox:           xmin: -73.95187 ymin: 40.79249 xmax: -73.95187 ymax: 40.79249
-## epsg (SRID):    4326
-## proj4string:    +proj=longlat +datum=WGS84 +no_defs</code></pre>
 <iframe title="A single address" width="400" height="400" src="geocodingnyc1_intmap1/index.html" frameborder="0" allowfullscreen>
 </iframe>
 <p>If we can automate replacement of spaces with the %20, that is hugely helpful for dealing with any amount of addresses, given how many spaces one would encounter. A quick search yielded <a href="https://stackoverflow.com/questions/40301888/replace-space-with-20-in-r/40301947#40301947">this suggestion on StackOverflow</a>: you can just use the ‘URLencode’ function in base R, as below.</p>
