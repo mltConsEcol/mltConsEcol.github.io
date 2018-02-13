@@ -18,7 +18,8 @@
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/20180210_geocodingnyc/</guid>
-      <description>&lt;div id=&#34;geocoding&#34; class=&#34;section level2&#34;&gt;
+      <description>&lt;p&gt;&lt;em&gt;Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the &lt;a href=&#34;https://cran.r-project.org/web/packages/rmapzen/&#34;&gt;rmapzen R package&lt;/a&gt;; see the end of this post for more info.&lt;/em&gt;&lt;/p&gt;
+&lt;div id=&#34;geocoding&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Geocoding&lt;/h2&gt;
 &lt;p&gt;In GIS and various other fields, Geocoding is a common operation. Not familar with Geocoding? Check out this great definition from &lt;a href=&#34;https://developers.google.com/maps/documentation/geocoding/start&#34;&gt;Google&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -93,7 +94,30 @@ misc_addresses &amp;lt;- nycgeocode(addresses)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;Regardless of everything else, if the system is given a query for something fairly vague, amidst a query for more specific places, a user would need to parse through which of the options given for a vague location they were looking for. Perhaps this could be done on a map, graphically, using the &lt;a href=&#34;https://cran.r-project.org/web/packages/mapedit/index.html&#34;&gt;mapedit package&lt;/a&gt;. I don’t have another clean way of doing that, but it’s probably something that would need to be thought through if further developing this work in R.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;One would probably want to include functionality to easily join the spatial results with the original addresses provided. For example, if a user has a data table with a column of addresses, along with other fields, it might be helpful to do the geocode and have a result returned with the original fields as well as lat/long, bbl, bin, etc.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;closing-note&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Closing Note&lt;/h2&gt;
 &lt;p&gt;Overall, this was an interesting exercise to spend a few hours on. I’m excited about the NYC specific geocoder, and as always in trying things out in R, I learned a thing or two. Feel free to reach out with other thoughts on this.&lt;/p&gt;
+&lt;div id=&#34;additional-info-added-12-feb-2018&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;em&gt;Additional Info, added 12 Feb 2018&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Thanks to Twitter, I learned of the &lt;a href=&#34;https://cran.r-project.org/web/packages/rmapzen/&#34;&gt;rmapzen R package&lt;/a&gt;, which is already set up to use Pelias-based geocoding systems. Below is some sample code for a single address… I’ll be curious to explore this more myself. At time of writing, for application with the NYC GeoSearch system, you’ll need to use a dev-version from GitHub, as per the &lt;code&gt;install.packages&lt;/code&gt; line (commented out), which lets you use a custom api.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# devtools::install_github(&amp;quot;tarakc02/rmapzen&amp;quot;, ref = &amp;quot;devel&amp;quot;) 
+library(rmapzen)
+
+# Specify API
+options(RMAPZEN_SEARCH_HOST = &amp;quot;geosearch.planninglabs.nyc&amp;quot;)
+
+#Specify Mapzen key (NA in this case)
+Sys.setenv(&amp;quot;MAPZEN_KEY&amp;quot; = NA) 
+
+#Search
+mz_search(&amp;quot;1220 Fifth Ave, New York, NY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## GeoJSON response from Mapzen
+## Attribution info: /v1/attribution 
+## Bounds (lon/lat): (-73.95, 40.79) - (-73.95, 40.79)
+## 1 locations:
+##    1220 FIFTH AVENUE (-73.95, 40.79)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
