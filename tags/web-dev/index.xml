@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Dev on Mike Treglia</title>
-    <link>/tags/web-dev/</link>
+    <link>https://mltconsecol.github.io</link>
     <description>Recent content in Web Dev on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/tags/web-dev/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mltconsecol.github.io/tags/web-dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting Going with Blogdown &amp; Hugo</title>
-      <link>/post/20170123_blogdown_hugo/</link>
+      <link>https://mltconsecol.github.io/post/20170123_blogdown_hugo/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/20170123_blogdown_hugo/</guid>
+      <guid>https://mltconsecol.github.io/post/20170123_blogdown_hugo/</guid>
       <description>
 
 &lt;h2 id=&#34;why-blogdown&#34;&gt;Why Blogdown?&lt;/h2&gt;
@@ -196,10 +196,10 @@ ignoreFiles = [&amp;quot;\\.Rmd$&amp;quot;, &amp;quot;\\.Rmarkdown$&amp;quot;, &
     
     <item>
       <title>Time for a Website Makeover</title>
-      <link>/post/time-for-webpage-update/</link>
+      <link>https://mltconsecol.github.io/post/time-for-webpage-update/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/time-for-webpage-update/</guid>
+      <guid>https://mltconsecol.github.io/post/time-for-webpage-update/</guid>
       <description>
 
 &lt;h2 id=&#34;time-for-a-change&#34;&gt;Time for a Change&lt;/h2&gt;

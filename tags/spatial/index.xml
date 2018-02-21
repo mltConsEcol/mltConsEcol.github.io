@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spatial on Mike Treglia</title>
-    <link>/tags/spatial/</link>
+    <link>https://mltconsecol.github.io</link>
     <description>Recent content in Spatial on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/tags/spatial/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mltconsecol.github.io/tags/spatial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Geocoding in NYC from R</title>
-      <link>/post/20180210_geocodingnyc/</link>
+      <link>https://mltconsecol.github.io/post/20180210_geocodingnyc/</link>
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/20180210_geocodingnyc/</guid>
+      <guid>https://mltconsecol.github.io/post/20180210_geocodingnyc/</guid>
       <description>&lt;p&gt;&lt;em&gt;Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the &lt;a href=&#34;https://cran.r-project.org/web/packages/rmapzen/&#34;&gt;rmapzen R package&lt;/a&gt;; see the end of this post for more info.&lt;/em&gt;&lt;/p&gt;
 &lt;div id=&#34;geocoding&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Geocoding&lt;/h2&gt;
@@ -57,7 +57,7 @@
 ## bbox:           xmin: -73.95187 ymin: 40.79249 xmax: -73.95187 ymax: 40.79249
 ## epsg (SRID):    4326
 ## proj4string:    +proj=longlat +datum=WGS84 +no_defs&lt;/code&gt;&lt;/pre&gt;
-&lt;iframe title=&#34;A single address&#34; width=&#34;600&#34; height=&#34;400&#34; src=&#34;geocodingnyc1_intmap1/index.html&#34; frameborder=&#34;0&#34; allowfullscreen&gt;
+&lt;iframe title=&#34;A single address&#34; width=&#34;600&#34; height=&#34;400&#34; src=&#34;geocodingnyc1_intmap1.html&#34; frameborder=&#34;0&#34; allowfullscreen&gt;
 &lt;/iframe&gt;
 &lt;p&gt;If we can automate replacement of spaces with the %20, that is hugely helpful for dealing with any amount of addresses, given how many spaces one would encounter. A quick search yielded &lt;a href=&#34;https://stackoverflow.com/questions/40301888/replace-space-with-20-in-r/40301947#40301947&#34;&gt;this suggestion on StackOverflow&lt;/a&gt;: you can just use the ‘URLencode’ function in base R, as below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sf::st_read(URLencode(&amp;quot;https://geosearch.planninglabs.nyc/v1/search?text=1220 Fifth Ave, New York, NY&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
@@ -70,7 +70,7 @@
 geocoded_results &amp;lt;- do.call(rbind, lapply(search_urls, sf::st_read))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can inspect the resulting object using functions like &lt;code&gt;str&lt;/code&gt;, or &lt;code&gt;View&lt;/code&gt; (and you can easily see details of the resulting object). And just as before, you can use&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mapview::mapview(geocoded_results)&lt;/code&gt;&lt;/pre&gt;
-&lt;iframe title=&#34;Multiple Addresses&#34; width=&#34;600&#34; height=&#34;400&#34; src=&#34;geocodingnyc1_intmap2/index.html&#34; frameborder=&#34;0&#34; allowfullscreen&gt;
+&lt;iframe title=&#34;Multiple Addresses&#34; width=&#34;600&#34; height=&#34;400&#34; src=&#34;geocodingnyc1_intmap2.html&#34; frameborder=&#34;0&#34; allowfullscreen&gt;
 &lt;/iframe&gt;
 &lt;p&gt;Interestingly, you’ll notice a bunch of points at Snug Harbor Cultural Center, which presumably share the same address, but are distinct buildings.&lt;/p&gt;
 &lt;p&gt;We can put all of the above into a function too:&lt;/p&gt;
