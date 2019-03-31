@@ -9,15 +9,15 @@
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://mltconsecol.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://mltconsecol.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>
 
 &lt;h3 id=&#34;a-bit-about-me&#34;&gt;A Bit About Me:&lt;/h3&gt;

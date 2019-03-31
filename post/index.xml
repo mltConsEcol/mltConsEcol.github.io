@@ -9,15 +9,15 @@
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://mltconsecol.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Geocoding in NYC from R</title>
-      <link>https://mltconsecol.github.io/post/20180210_geocodingnyc/</link>
+      <link>/post/20180210_geocodingnyc/</link>
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/post/20180210_geocodingnyc/</guid>
+      <guid>/post/20180210_geocodingnyc/</guid>
       <description>&lt;p&gt;&lt;em&gt;Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the &lt;a href=&#34;https://cran.r-project.org/web/packages/rmapzen/&#34;&gt;rmapzen R package&lt;/a&gt;; see the end of this post for more info.&lt;/em&gt;&lt;/p&gt;
 &lt;div id=&#34;geocoding&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Geocoding&lt;/h2&gt;
@@ -111,12 +111,7 @@ options(RMAPZEN_SEARCH_HOST = &amp;quot;geosearch.planninglabs.nyc&amp;quot;)
 Sys.setenv(&amp;quot;MAPZEN_KEY&amp;quot; = NA) 
 
 #Search
-mz_search(&amp;quot;1220 Fifth Ave, New York, NY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## GeoJSON response from Mapzen
-## Attribution info: /v1/attribution 
-## Bounds (lon/lat): (-73.95, 40.79) - (-73.95, 40.79)
-## 1 locations:
-##    1220 FIFTH AVENUE (-73.95, 40.79)&lt;/code&gt;&lt;/pre&gt;
+#mz_search(&amp;quot;1220 Fifth Ave, New York, NY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -124,10 +119,10 @@ mz_search(&amp;quot;1220 Fifth Ave, New York, NY&amp;quot;)&lt;/code&gt;&lt;/pre
     
     <item>
       <title>Getting Going with Blogdown &amp; Hugo</title>
-      <link>https://mltconsecol.github.io/post/20170123_blogdown_hugo/</link>
+      <link>/post/20170123_blogdown_hugo/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/post/20170123_blogdown_hugo/</guid>
+      <guid>/post/20170123_blogdown_hugo/</guid>
       <description>
 
 &lt;h2 id=&#34;why-blogdown&#34;&gt;Why Blogdown?&lt;/h2&gt;
@@ -306,10 +301,10 @@ ignoreFiles = [&amp;quot;\\.Rmd$&amp;quot;, &amp;quot;\\.Rmarkdown$&amp;quot;, &
     
     <item>
       <title>Time for a Website Makeover</title>
-      <link>https://mltconsecol.github.io/post/time-for-webpage-update/</link>
+      <link>/post/time-for-webpage-update/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/post/time-for-webpage-update/</guid>
+      <guid>/post/time-for-webpage-update/</guid>
       <description>
 
 &lt;h2 id=&#34;time-for-a-change&#34;&gt;Time for a Change&lt;/h2&gt;
