@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.32.3" />
+  <meta name="generator" content="Hugo 0.54.0" />
 
   <title>Geocoding in NYC from R &middot; Mike Treglia</title>
 
@@ -267,7 +267,10 @@
 
 </div>
 
-  <p><em>Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the <a href="https://cran.r-project.org/web/packages/rmapzen/">rmapzen R package</a>; see the end of this post for more info.</em></p>
+  
+
+
+<p><em>Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the <a href="https://cran.r-project.org/web/packages/rmapzen/">rmapzen R package</a>; see the end of this post for more info.</em></p>
 <div id="geocoding" class="section level2">
 <h2>Geocoding</h2>
 <p>In GIS and various other fields, Geocoding is a common operation. Not familar with Geocoding? Check out this great definition from <a href="https://developers.google.com/maps/documentation/geocoding/start">Google</a>:</p>
@@ -351,9 +354,9 @@ misc_addresses &lt;- nycgeocode(addresses)</code></pre>
 <h3><em>Additional Info, added 12 Feb 2018</em></h3>
 <p>Thanks to Twitter, I learned of the <a href="https://cran.r-project.org/web/packages/rmapzen/">rmapzen R package</a>, which is already set up to use Pelias-based geocoding systems. Below is some sample code for a single address… I’ll be curious to explore this more myself. At time of writing, for application with the NYC GeoSearch system, you’ll need to use a dev-version from GitHub, as per the <code>install.packages</code> line (commented out), which lets you use a custom api.</p>
 <pre class="r"><code># devtools::install_github(&quot;tarakc02/rmapzen&quot;, ref = &quot;devel&quot;) 
-library(rmapzen)
-
-# Specify API
+library(rmapzen)</code></pre>
+<pre><code>## Warning: package &#39;rmapzen&#39; was built under R version 3.5.3</code></pre>
+<pre class="r"><code># Specify API
 options(RMAPZEN_SEARCH_HOST = &quot;geosearch.planninglabs.nyc&quot;)
 
 #Specify Mapzen key (NA in this case)
@@ -384,8 +387,14 @@ Sys.setenv(&quot;MAPZEN_KEY&quot; = NA)
   </div>
   <div class="pure-u-10-24">
     
+    <nav class="next">
+      <a href="/post/20190331_cherryblossomsnyc/">Cherry Blossom Season in NYC</a>
+    </nav>
+    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="/post/20190331_cherryblossomsnyc/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

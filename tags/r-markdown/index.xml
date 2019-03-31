@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Markdown on Mike Treglia</title>
-    <link>https://mltconsecol.github.io</link>
+    <link>/tags/r-markdown/</link>
     <description>Recent content in R Markdown on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,180 +18,7 @@
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/20170123_blogdown_hugo/</guid>
-      <description>
-
-&lt;h2 id=&#34;why-blogdown&#34;&gt;Why Blogdown?&lt;/h2&gt;
-
-&lt;p&gt;As I&amp;rsquo;ve &lt;a href=&#34;../time-for-webpage-update/&#34;&gt;noted before&lt;/a&gt;, my previous website was pretty basic. While it was largely simple to make updates, it wasn&amp;rsquo;t particularly elegant. It was functional, and definitely looked reasonable when it was first created. Editing it wasn&amp;rsquo;t too difficult, but took some forethought if I wanted to make updates across the website. I&amp;rsquo;m not at all trained in web development, and just I picked up a few things by working off a template a friend created for me, and toying around with some .js code in leaflet maps (and lots of googling of course); thus, I might have missed some things that would have made my life a lot easier, but here I am.&lt;/p&gt;
-
-&lt;p&gt;In the middle/end of grad school I picked up a suite of tools which I now use regularly - namely &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt;, &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; (and &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;), and &lt;a href=&#34;https://en.wikipedia.org/wiki/Markdown&#34;&gt;markdown&lt;/a&gt;, among others. The R package, &lt;a href=&#34;https://blog.rstudio.com/2017/09/11/announcing-blogdown/&#34;&gt;Blogdown&lt;/a&gt;, which was only developed in recent years, facilitates using R/R markdown/Markdown to make a better-looking website that is easier to update. Blogdown relies on &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, a static page generator that can compile markdown files with templates into full webpages.&lt;/p&gt;
-
-&lt;p&gt;This post is intended to summarize some aspects of Blogdown, Hugo, and getting it all set up with GitHub Pages as I figured it out, as well as highlight some things I learned.&lt;/p&gt;
-
-&lt;h2 id=&#34;getting-started-with-blogdown&#34;&gt;Getting Started with Blogdown&lt;/h2&gt;
-
-&lt;p&gt;Thankfully, I&amp;rsquo;m far from the first person who&amp;rsquo;s used Blogdown to get a website going, and there&amp;rsquo;s even a &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;free e-book&lt;/a&gt; by &lt;a href=&#34;https://yihui.name&#34;&gt;Yihui Xie&lt;/a&gt;, &lt;a href=&#34;https://amber.rbind.io&#34;&gt;Amber Thomas&lt;/a&gt;, and &lt;a href=&#34;https://alison.rbind.io&#34;&gt;Alison Presmanes Hill&lt;/a&gt; on the topic. There are also numerous blogs, including &lt;a href=&#34;https://tclavelle.github.io/blog/blogdown_github/&#34;&gt;this one&lt;/a&gt; I&amp;rsquo;ve found useful. If you&amp;rsquo;re just getting started, definitely go through the first  chapters of the e-book and try to get something going on your local machine before getting your site online.&lt;/p&gt;
-
-&lt;h3 id=&#34;choosing-a-hugo-theme-and-making-some-minor-changes&#34;&gt;Choosing a Hugo Theme and Making some Minor Changes&lt;/h3&gt;
-
-&lt;p&gt;An important step in setting up your site that will be generated via Hugo is choosing a Theme - i.e., a template that you&amp;rsquo;ll adjust and feed your content into for rendering. You can think through what your needs are, and filter by different characteristics. For example, I wanted my site to be responsive, so I only looked at &lt;a href=&#34;https://themes.gohugo.io/tags/responsive/&#34;&gt;themes that were tagged as such&lt;/a&gt;. Then, I browsed through some of the demos, and saw what elements they had. Having clear links to social media pages and such seemed useful, as well as having a way to create a fairly straightforward blog. As indicated on the left panel of this page, I went with the &lt;a href=&#34;https://themes.gohugo.io/blackburn/&#34;&gt;Blackburn theme&lt;/a&gt; developed by &lt;a href=&#34;http://yoshiharuyamashita.com/&#34;&gt;Yoshiharu Yamashita&lt;/a&gt;. It was aesthetically pleasing, had fairly recent commits in the GitHub repo (indicating it is still maintained), and seemed fairly customizable.&lt;/p&gt;
-
-&lt;p&gt;I started by following the workflow suggested in the aforementioned e-book, adjusting configuration settings (in the configuration file, &lt;em&gt;config.toml&lt;/em&gt;) that comes with the template to make sure I could adjust some things I wanted, and went from there. In particular, below is my initial code, run in &lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# Install packages and dependencies
-install.packages(&amp;quot;blogdown&amp;quot;)
-blogdown::install_hugo()
-install.packages(&amp;quot;later&amp;quot;)
-
-# Set up web project
-blogdown::new_site(dir = &amp;quot;blackburnFiles&amp;quot;, #New Directory within working directory where web content will be stored
-                   theme = &#39;yoshiharuyamashita/blackburn&#39;, #theme information
-                   format = &#39;toml&#39;) #specify toml instead of yaml
-				   
-#To build and view default page
-setwd(&amp;quot;blackburnFiles&amp;quot;)
-blogdown::build_site()
-blogdown::serve_site()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There were a few particular things that I wanted to adjust in the config file - some were pretty self-explanatory and others were a matter of trial and error. Particular things I edited in the config.toml file (which can easily be done within RStudio or any text editor) are noted below, followed by the original config file with notes included after hashtags [Note: Some comments were already included]. Also, I&amp;rsquo;ll add that some of these edits might be very specific to the Blackburn theme, but I honestly haven&amp;rsquo;t done enough exploration at this point to verify. (Any quick insights are welcome.) The LiveReload functionality was handy, as every time I&amp;rsquo;d save an edit to the config.toml file, I&amp;rsquo;d see the result pretty much immediately. More details on configuration files are &lt;a href=&#34;https://bookdown.org/yihui/blogdown/configuration.html&#34;&gt;here&lt;/a&gt;; I didn&amp;rsquo;t make a ton of adjustments, mostly focusing on making it work for my immediate purposes.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Brand (Blackburn -&amp;gt; MikeTreglia)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;baseurl (&amp;ldquo;&lt;a href=&#34;https://www.example.com/&amp;quot;&#34;&gt;https://www.example.com/&amp;quot;&lt;/a&gt; -&amp;gt; &amp;ldquo;&lt;a href=&#34;https://mltconsecol.github.io/&amp;quot;&#34;&gt;https://mltconsecol.github.io/&amp;quot;&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;High level page listing.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;I wasn&amp;rsquo;t sure where the icons next to the label came from, but from googling the code snippet preceding the name of the pages in the config file, found these were &lt;a href=&#34;http://fontawesome.io/&#34;&gt;Font Awesome&lt;/a&gt; icons You can find a whole bunch of alternatives to use as you see appropriate.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Because Font Awesome is pulling from a remote source, if you&amp;rsquo;re testing without  internet the icons will be lacking. (There are other elements in the theme that seem to rely on remote info, such as the font, so if you&amp;rsquo;re testing without internet access, don&amp;rsquo;t freak out about strange appearances yet.)&lt;/em&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Updated info for Social Media links/remove irrelevant ones. You can conveniently comment out irrelevant ones by simply prefacing them with a #.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;I also updated a few other things, mostly pretty self-explanatory so I won&amp;rsquo;t go into further detail at this point.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;https://www.example.com/&amp;quot; #updated this appropriately for my own page
-languageCode = &amp;quot;en-us&amp;quot;
-title = &amp;quot;Blackburn Theme Demo&amp;quot; #Changed to the title for my site (my name))
-theme = &amp;quot;blackburn&amp;quot;
-author = &amp;quot;Yoshiharu Yamashita&amp;quot; #Adjusted appropriately
-copyright = &amp;quot;&amp;amp;copy; 2016. All rights reserved.&amp;quot; #Changed to 2018
-canonifyurls = true
-paginate = 10
-
-#This was added as per suggestion/warning in R upon build:
-ignoreFiles = [&amp;quot;\\.Rmd$&amp;quot;, &amp;quot;\\.Rmarkdown$&amp;quot;, &amp;quot;_files$&amp;quot;, &amp;quot;_cache$&amp;quot;] 
-
-
-[indexes]
-  tag = &amp;quot;tags&amp;quot;
-  topic = &amp;quot;topics&amp;quot;
-
-[params]
-  # Shown in the home page
-  subtitle = &amp;quot;A Hugo Theme&amp;quot; #Updated as appropriate for my own descriptors
-  brand = &amp;quot;Blackburn&amp;quot; #Brand corresponds to the &#39;MikeTreglia&#39; in the upper-left of the side-bar
-  googleAnalytics = &amp;quot;Your Google Analytics tracking ID&amp;quot; #Fill this in as desired
-  disqus = &amp;quot;Your Disqus shortname&amp;quot;
-  # CSS name for highlight.js
-  highlightjs = &amp;quot;androidstudio&amp;quot;
-  dateFormat = &amp;quot;02 Jan 2006, 15:04&amp;quot; #This drives how date/time will be displayed with blog posts. I eliminated the time from mine.
-
-#You can add/remove elements in the side menu here; weight adjusts the ordering.
-[menu]
-  # Shown in the side menu.
-  [[menu.main]]
-    name = &amp;quot;Home&amp;quot;
-    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-home fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
-    weight = 1
-    identifier = &amp;quot;home&amp;quot;
-    url = &amp;quot;/&amp;quot;
-  [[menu.main]]
-    name = &amp;quot;Posts&amp;quot;
-    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-list fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
-    weight = 2
-    identifier = &amp;quot;post&amp;quot;
-    url = &amp;quot;/post/&amp;quot;
-  [[menu.main]]
-    name = &amp;quot;About&amp;quot;
-    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-user fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
-    weight = 3
-    identifier = &amp;quot;about&amp;quot;
-    url = &amp;quot;/about/&amp;quot;
-  [[menu.main]]
-    name = &amp;quot;Contact&amp;quot;
-    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-phone fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
-    weight = 4
-    url = &amp;quot;/contact/&amp;quot;
-#I added a few more as you&#39;ll see here.
-
-[social]
-  # Link your social networking accouns to the side menu
-  # by entering your username or ID.
-  twitter = &amp;quot;*&amp;quot;
-  facebook = &amp;quot;*&amp;quot;
-  instagram = &amp;quot;*&amp;quot;
-  github = &amp;quot;yoshiharuyamashita&amp;quot;
-  stackoverflow = &amp;quot;*&amp;quot;
-  linkedin = &amp;quot;*&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There are still one or two things I would consider editing, which might not have been as obvious to do and simply weren&amp;rsquo;t a high priority. For example, it would be great to add, with the social media links, a link to my Google Scholar profile (likely of interest for lots of academics).&lt;/p&gt;
-
-&lt;h3 id=&#34;editing-pages&#34;&gt;Editing Pages&lt;/h3&gt;
-
-&lt;p&gt;You&amp;rsquo;ll see that in the config file that comes with the Blackburn template, the high level page listing in the side menu directs to specific folders (e.g., &amp;ldquo;/About/&amp;rdquo; for the &lt;em&gt;About&lt;/em&gt; page). However, at least when starting everything from blogdown, there is a folder within &amp;lsquo;content&amp;rsquo; called &amp;lsquo;post&amp;rsquo;, where blog posts are saved (as Markdown/R Markdown files, to be compiled on website build), but then there are simply &amp;lsquo;about.md&amp;rsquo; and &amp;lsquo;contact.md&amp;rsquo; files. For my own organization, I decided to set up folders for each main page, such that I could keep my content organized with any related files. Thus, in my &amp;lsquo;content&amp;rsquo; folder, I have folders for each relevant page, with an index.md file, and all associated files, such as images. When the site is built, all content gets organized appropriately in the &amp;lsquo;public&amp;rsquo; folder.&lt;/p&gt;
-
-&lt;p&gt;From RStudio, there are add-ins you can use to make life a bit easier in creating new blog posts and such. These are detailed &lt;a href=&#34;https://bookdown.org/yihui/blogdown/rstudio-ide.html&#34;&gt;here&lt;/a&gt;. I&amp;rsquo;ll note that at this point, I&amp;rsquo;m just starting with new text files, filling in an appropriate yaml header (based on the template md/Rmd files) and going from there, though we&amp;rsquo;ll see how/if I adjust in the future. I definitely recommend checking out the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/output-format.html&#34;&gt;relevant section of the Blogdown book on R Markdown vs Markdown&lt;/a&gt; to better think through when you might use each in this context. And if you&amp;rsquo;re not familiar with either, definitely do some googling.&lt;/p&gt;
-
-&lt;h3 id=&#34;hosting-on-github&#34;&gt;Hosting on Github&lt;/h3&gt;
-
-&lt;p&gt;There are multiple ways to host a site created via blogdown, detailed in the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/deployment.html&#34;&gt;deployment&lt;/a&gt; section of the e-book. Since I already had experience with &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; and had a site there already, it made sense for me to stick with it, realizing it might not be the easiest way to host blogdown/hugo pages, and figuring I&amp;rsquo;ll learn a thing or two.&lt;/p&gt;
-
-&lt;p&gt;If you&amp;rsquo;re new to github pages, you&amp;rsquo;ll need to set up a repository titled [username].github.io, add your content, and initialize the page through settings for your repo. (Lots of online resources are out there for getting started.)&lt;/p&gt;
-
-&lt;p&gt;GitHub Pages is set up to work with another static site generator, Jekyll, but can work with Hugo-driven pages without too much trouble (or plain old html files). I give an overview of how I did things in the steps below - this is what made sense to and worked, though definitely check out the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/github-pages.html&#34;&gt;relevant section of the blogdown e-book for more&lt;/a&gt;, as well as a &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;hugo page about hosting on GitHub Pages&lt;/a&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Set up a &lt;a href=&#34;https://github.com/mltConsEcol/WebsiteFiles&#34;&gt;repository for all of my web files, &amp;ldquo;WebsiteFiles&amp;rdquo;&lt;/a&gt;. Basically I created the repo via the GitHub website, cloned it to my local machine. I had already been testing things locally, so just copied the files created from blogdown::newsite() with the edits I made, and after using &lt;code&gt;blogdown::build_site()&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;I copied the contents of the &amp;lsquo;public&amp;rsquo; folder to the repository associated with GitHub Pages(mltconsecol.github.io), and deleted the contents from the &amp;lsquo;public&amp;rsquo; folder in the &amp;lsquo;WebsiteFiles&amp;rsquo; folder/repository (but leave the actual folder - just leave it empty). In the GitHub Pages repo, simply put these files in the highest level (i.e., &lt;strong&gt;do not put them in a folder within the repo called &amp;lsquo;public&amp;rsquo;&lt;/strong&gt;).
-
-&lt;ol&gt;
-&lt;li&gt;I also added a blank file called .nojekyll to the &amp;lsquo;public&amp;rsquo; folder (now in the GitHub Pages repo), which can help avoid problems of GitHub pages trying to rebuild a page via Jekyll (which won&amp;rsquo;t work, resulting in an error).&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;After pushing all of the content you just moved to your GitHub Pages repo, you can copy this content back into the WebsiteFiles/public as a git submodule. This was entirely new to me, but basically allows you to maintain a Git-tracked directory within another one. The basic git command for this is &lt;code&gt;git submodule add -b master git@github.com:[username]/[username].github.io.git public&lt;/code&gt;.
-
-&lt;ol&gt;
-&lt;li&gt;In my case, this required setting up an ssh key, which I had never done before with Git. (It also reminded me to set up two-factor authentication for GitHub - important and easy for added security.) The error I received included &amp;ldquo;&lt;code&gt;Error: Permission denied (publickey)&lt;/code&gt;.&amp;rdquo; Thankfully there are &lt;a href=&#34;https://help.github.com/articles/error-permission-denied-publickey/&#34;&gt;great docs on how to deal with this&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;As you edit your content and rebuild the site, you can commit and push your changes to your high-level folder/repository (WebsiteFiles, in my case), as well as the &lt;em&gt;public&lt;/em&gt; folder, needed for the changes to take shape on your actual website.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;other-notes&#34;&gt;Other notes&lt;/h3&gt;
-
-&lt;p&gt;There are a few other notes worth raising before wrapping up.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;It&amp;rsquo;s important that users realize the themes are often times being updated through time. How should I, as somebody with a website keep up with such changes? A quick post to the &lt;a href=&#34;https://twitter.com/pjs_228/status/950095675961864194&#34;&gt;twitter-verse&lt;/a&gt; indicated to set up the theme using a git submodule framework. A quick google around this yields some useful results, such as &lt;a href=&#34;http://choomnuan.com/blog/2015/07/18/how-to-setup-hugos-theme-using-git-submodule/&#34;&gt;this post&lt;/a&gt;, among others. At this point I haven&amp;rsquo;t done this - but might be good practice for the future, or might add it&amp;rsquo;s own complexities.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;If you keep your files in Dropbox folders or similar and sync across multiple computers, make sure you don&amp;rsquo;t mess up your syncing! Ideally, make sure your computers are synced before making changes. This caused me some issues at some point, and I had to restore an earlier version of my work after wondering why nothing was rendering right. Because there can be a bunch of files that get re-created upon each build, it might take a minute or two for syncing to complete, depending on your content, connection, etc.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For testing purposes, I tried to simply set up the new website as a new page-enabled github repo on the same account my website is hosted from. I ended up running into some issues, in which I had problems with links to internal pages breaking, or strangely the sidebar not popping up on mobile/narrow screens. (I messed around with options to adjust the &amp;lsquo;baseurl&amp;rsquo; as seemingly appropriate and such, but never got everything working.) Thus, I ended up testing a bit more completely by running the website from another GitHub account, and didn&amp;rsquo;t actually fix the issues I was facing in running as another GitHub project. At this point I&amp;rsquo;m just saving that for another time, when an actual need comes up. I was more worried about getting this site to be functional and live, and apparently I&amp;rsquo;ve gotten there.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;At this point I&amp;rsquo;ve decided to add a &lt;a href=&#34;https://disqus.com/&#34;&gt;Disqus&lt;/a&gt; comments section. Googling around about disqus and hugo, it seems a lot of folks aren&amp;rsquo;t the biggest fans (see &lt;a href=&#34;https://discourse.gohugo.io/t/alternative-to-disqus-needed-more-than-ever/5516&#34;&gt;here&lt;/a&gt;). That said, as I&amp;rsquo;ve noted before, I&amp;rsquo;m interested in getting this site up and running functionally, and especially for posts like this I see functionality in having a comment section. Thus, I&amp;rsquo;ve added disqus-based comments here, realizing I can always disable it if I need. And I conveniently just stumbled upon &lt;a href=&#34;https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/&#34;&gt;this useful blog post&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Edit, 9 Feb 2018: The rss feeds produced by default don&amp;rsquo;t pass testing via the &lt;a href=&#34;https://validator.w3.org/feed/&#34;&gt;W3C Feed Validation Service&lt;/a&gt;. Check out this blog post from the &lt;a href=&#34;https://coolbutuseless.bitbucket.io/2018/02/07/blogdown-rss-feed-of-full-articles/&#34;&gt;Cool but Useless&lt;/a&gt; blog on how to fix this. For the blackburn template I used, there was no rss.xml file in the layouts folder, so I made one using the template &lt;a href=&#34;https://gohugo.io/templates/rss/#the-embedded-rss-xml&#34;&gt;here, from  the hugo webpage&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Also - check out the &lt;a href=&#34;https://rweekly.org/&#34;&gt;RWeekly&lt;/a&gt; for a whole host of other blogs related to R.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Why Blogdown? As I&amp;rsquo;ve noted before, my previous website was pretty basic. While it was largely simple to make updates, it wasn&amp;rsquo;t particularly elegant. It was functional, and definitely looked reasonable when it was first created. Editing it wasn&amp;rsquo;t too difficult, but took some forethought if I wanted to make updates across the website. I&amp;rsquo;m not at all trained in web development, and just I picked up a few things by working off a template a friend created for me, and toying around with some .</description>
     </item>
     
   </channel>

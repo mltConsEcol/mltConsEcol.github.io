@@ -7,10 +7,85 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cherry Blossom Season in NYC</title>
+      <link>/post/20190331_cherryblossomsnyc/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/20190331_cherryblossomsnyc/</guid>
+      <description>
+
+
+&lt;div id=&#34;cherry-blossoms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cherry Blossoms&lt;/h2&gt;
+&lt;p&gt;It’s springtime in New York and cherry trees are starting to bloom. In fact street trees right outside my house in Staten Island are bright pink in flower right now… here’s a photo I took this morning.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cherrytrees.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Google searches will reveal a few places you can go to see cherry trees with festivals dedicated to them and such. But there are lots of cherry trees along streets and in parks of NYC. As you can see in the &lt;a href=&#34;https://tree-map.nycgovparks.org/&#34;&gt;NYC Tree Map&lt;/a&gt;, there are a few different species of cherry tree that are planted street trees, and if you filter by species to show a Japanese Flowering Cherry variety, you’ll see them.&lt;/p&gt;
+&lt;p&gt;Noticing the trees on my block this year, and knowing about some of our Open Data dedicated to street trees in NYC, I decided to make some of my own maps around this using R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Data&lt;/h2&gt;
+&lt;p&gt;NYC has a robust Open Data portal. There are &lt;a href=&#34;https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35&#34;&gt;data from the most recent street tree census&lt;/a&gt;, &lt;a href=&#34;https://www.nycgovparks.org/trees/treescount&#34;&gt;TreesCount!&lt;/a&gt;, and NYC Parks keeps track of those trees and some others, with updated datasets also on OpenData. In particular, there is a &lt;a href=&#34;https://data.cityofnewyork.us/Environment/Forestry-Tree-Points/k5ta-2trh&#34;&gt;Tree Points dataset&lt;/a&gt; that we’ll use here. This can also be joined via a unique ID to a dataset of planting spaces (noted on the webpages for the datasets). That planting spaces dataset has useful information like whether those trees are street trees or in-park trees, and whether the planting spaces are actively used. But for this work, I’ll only look at the Tree Points data, realizing it contains street trees and some, but not all in-park trees (in more landscaped areas).&lt;/p&gt;
+&lt;p&gt;We can download the data directly from with R. At the page with the data I obtained a download link by going to the ‘Export’ tab and hovering over the ‘CSV’ format - in Firefox you can see the download URL at the bottom left of the screen, and by right-clicking and selecting &lt;em&gt;Copy Link Location&lt;/em&gt; the link will be pasted to your clipboard.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;screenshot_opendata.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Here’s the code I used to download the data, using a simple &lt;code&gt;download.file()&lt;/code&gt; function in base R. I just wrote the file to a high-level directory, and saved the filename with the date of the data (based on the ‘About’ tab on the OpenData page, this dataset was last updated on March 1st, 2019).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Download the csv file from NYC OpenData (https://data.cityofnewyork.us/Environment/Forestry-Tree-Points/k5ta-2trh)
+download.file(&amp;quot;https://data.cityofnewyork.us/api/views/k5ta-2trh/rows.csv?accessType=DOWNLOAD&amp;quot;, &amp;quot;D:/treepoints_20190301.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;working-with-visualizing-the-data-in-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Working with &amp;amp; Visualizing the Data in R&lt;/h2&gt;
+&lt;p&gt;For this work I brought used the packages &lt;code&gt;sf&lt;/code&gt;, &lt;code&gt;dplyr&lt;/code&gt;, &lt;code&gt;stringr&lt;/code&gt;, and &lt;code&gt;mapview&lt;/code&gt;. You can install these by using &lt;code&gt;install.packages(&amp;quot;packagename&amp;quot;)&lt;/code&gt; and then load the packages for use using &lt;code&gt;library(packagename)&lt;/code&gt;. Multiple packages can be installed at once using syntax like &lt;code&gt;install.packages(c(&amp;quot;packagename1&amp;quot;, &amp;quot;packagename2&amp;quot;)). Later on we&#39;ll use the packages&lt;/code&gt;spatialEco&lt;code&gt;,&lt;/code&gt;sp&lt;code&gt;, and&lt;/code&gt;raster`, but if you’re following along I suggest not loading them until those packages are needed (I was having some issues using dplyr functions with sf objects after these and their dependencies were loaded).&lt;/p&gt;
+&lt;p&gt;To work with the data as a spatial dataset in R, I first brought the downloaded csv file into R using the base function &lt;code&gt;read.csv()&lt;/code&gt;, and then used the sf package to convert it to a Simple Features object. From looking at the data (and the metadata, available from the OpenData ‘About’ tab) I could see the “Geometry” contained the geometry information for each tree point in the form of well-known text. A number of good descriptions are available online; the &lt;a href=&#34;https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry&#34;&gt;Wikipedia entry&lt;/a&gt; on this topic is pretty informative. Many datasets for NYC are provided in NY State Plane - Long Island Zone (&lt;a href=&#34;http://spatialreference.org/ref/epsg/nad83-new-york-long-island-ftus/&#34;&gt;EPSG 2263&lt;/a&gt;) - this appears to be the case for this dataset as well.&lt;/p&gt;
+&lt;p&gt;Thus, I assigned a new object, &lt;em&gt;treepoints&lt;/em&gt; based on reading the .csv file in, and converting it to an sf (simple features) object using &lt;code&gt;st_as_sf()&lt;/code&gt;, using the arguments as below to set the geometry based on the well-known text field, and the appropriate coordinate reference system. Below you see the use of pipes, (%&amp;gt;%) which are convenient ways to string functions together. (There are many good resources online about using pipes in R - if you’re not familiar with them, give a look!)&lt;/p&gt;
+&lt;p&gt;Here’s the code I used. &lt;em&gt;Note - this took a few minutes for me on a decent laptop, as the treepoints dataset is quite large with almost 1 Million rows, so you might need to give it some time.&lt;/em&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;treepoints &amp;lt;- read.csv(&amp;quot;D:/treepoints_20190301.csv&amp;quot;) %&amp;gt;% st_as_sf(wkt=&amp;quot;Geometry&amp;quot;, crs=2263)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can inspect the data as we would most datasets, using &lt;code&gt;str()&lt;/code&gt; to view the structure of the dataset, and &lt;code&gt;head()&lt;/code&gt; or &lt;code&gt;tail()&lt;/code&gt; to view the first or last few rows. We can use plotting functions too. For the default plotting functions with sf objects, it will produce one plot per column. Especially with a big dataset like this it can be time consuming (and it will in fact truncate to a certain number of columns). To specify a column of data to plot for with an sf object, you can use something like: &lt;code&gt;plot(sfobject[,&amp;quot;columnname&amp;quot;])&lt;/code&gt;. Though we’ll hold off on plotting until we have the data a bit more refined.&lt;/p&gt;
+&lt;p&gt;Based on quick inspection of the data, there are two main useful columns for this - we would generally only care about trees that are living - thus, we can filter based on the ‘TPCondition’ field to exclude dead trees, and we only want cherry trees, so we can filter based on the ‘GenusSpecies’ field. In this case, we’ll only look for species indicated as &lt;em&gt;Prunus serrulata&lt;/em&gt;, or the Japanese Flowering Cherry. There are a few varieties of this species, noted with the data in the GenusSpecies field. The code below creates a new object, &lt;em&gt;cherry&lt;/em&gt;, in which the data are filtered for where GenusSpecies begins with ‘Prunus serrulata’ and where the TPCondition is NOT ‘Dead’, and returns only the geometry information and the GenusSpecies field. (&lt;code&gt;str_detect()&lt;/code&gt; is from the &lt;code&gt;stringr&lt;/code&gt; package; the other functions are from &lt;code&gt;dplyr&lt;/code&gt;.)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cherry &amp;lt;- filter(treepoints, str_detect(GenusSpecies, &amp;#39;^Prunus serrulata&amp;#39;)) %&amp;gt;% filter(TPCondition != &amp;quot;Dead&amp;quot;) %&amp;gt;% select(GenusSpecies)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This results in only about 35,000 observations. Thus, only the data we want, and while still large, it’s much more manageable than the data we started with. &lt;code&gt;plot(cherry[,&amp;quot;GenusSpecies&amp;quot;])&lt;/code&gt; will return something like the below, where the colors correspond to different varieties of &lt;em&gt;Prunus serrulata&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;map1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can also put together a pretty basic but very functional interactive map with the &lt;code&gt;mapview&lt;/code&gt; package. Check out the &lt;a href=&#34;https://r-spatial.github.io/mapview/&#34;&gt;package website&lt;/a&gt; for lots of good information. But a basic interactive map can be achieved via &lt;code&gt;mapView(cherry)&lt;/code&gt;. The code below sets up a mapview object where each variety that is listed is available as a separate layer (expand the Layers tab on the upper-left). Note, to make this map reasonable for loading the results are truncated to only show 20,000 points. (See the &lt;a href=&#34;https://r-spatial.github.io/mapview/articles/articles/mapview_03-options.html&#34;&gt;mapview options&lt;/a&gt; for more details about adjusting these types of parameters).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Create the mapview object 
+mv &amp;lt;- mapView(cherry,zcol=&amp;quot;GenusSpecies&amp;quot;, burst=TRUE, legend=TRUE)
+
+# Show the mapview object
+mv&lt;/code&gt;&lt;/pre&gt;
+&lt;iframe title=&#34;mapview map for flowering cherry trees&#34; width=&#34;600&#34; height=&#34;400&#34; src=&#34;cherrytreemapview1.html&#34; frameborder=&#34;0&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;density-map-of-flowering-cherry-trees&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Density Map of Flowering Cherry Trees&lt;/h2&gt;
+&lt;p&gt;While the above map is neat, allowing easy one to zoom in easily across the map and see individual trees, it can be a bit overwhelming with so many points. Thus, we can use a kernel density surface to create a smoothed, continuous surface of “hotspots”. In my opinion this is nicer looking and interpretable - essentially the brighter areas are, the more likely people are to encounter flowering cherry trees. You’ll see there are &lt;em&gt;generally&lt;/em&gt; some flowering cherry trees throughout the city, but there are major hotspots out in Queens - in particular, look between JFK Airport and the Belt Parkway. Also, even in areas that don’t generally have a lot of flowering cherry trees, sometimes there are significant stretches of them - look along Park Ave. on the Upper East Side. (See below for more detail on making this.)&lt;/p&gt;
+&lt;iframe title=&#34;mapview map for KDE of flowering cherry trees&#34; width=&#34;600&#34; height=&#34;400&#34; src=&#34;cherrytreemapviewdensity.html&#34; frameborder=&#34;0&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;Here I used the function for creating a simple kernel density estimate in 2-dimensions using the &lt;code&gt;spatialEco&lt;/code&gt; package, function &lt;code&gt;sp.kde&lt;/code&gt;. Though there are more scientific ways to select an appropriate bandwidth, I’ve experimented with different bandwidth and think a bandwidth of 2,000 ft. might give users useful information in terms of density of flowering cherry trees and settled on 2000 ft in this case. As you’ll see in the code below, I also created a blank raster object for the extent of the NYC borough boundaries, with 100 ft pixels. This involved pulling in the NYC Borough boundaries as an sf object directly from NYC OpenData using the download URL (data available &lt;a href=&#34;https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm&#34;&gt;here&lt;/a&gt;) and reprojecting to the same coordinate system as the tree data.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Load necessary packages
+library(raster)
+library(spatialEco)
+library(sp)
+
+# Load the borough boundaries from OpenData and transform to appropriate CRS (from Lat/Long WGS84 [EPSG 4362])
+boroughs &amp;lt;- st_read(&amp;quot;https://data.cityofnewyork.us/api/geospatial/tqmj-j8zm?method=export&amp;amp;format=GeoJSON&amp;quot;) %&amp;gt;% st_transform(crs=2263)
+
+# Create raster representing the extent of the borough boundaries at 100 ft. resolution. 
+boroughs.r &amp;lt;- raster(xmn=st_bbox(boroughs)[&amp;quot;xmin&amp;quot;], xmx=st_bbox(boroughs)[&amp;quot;xmax&amp;quot;],ymn=st_bbox(boroughs)[&amp;quot;ymin&amp;quot;], ymx=st_bbox(boroughs)[&amp;quot;ymax&amp;quot;], crs=2263, resolution=100)
+
+# Convert the sf object to an sp object, required by the kde function
+cherry.spdf &amp;lt;- as(cherry, &amp;#39;Spatial&amp;#39;)
+
+# Create the Kernel Density surface.
+cherry.kde &amp;lt;- sp.kde(x = cherry.spdf, bw = 2000, standardize = TRUE, newdata = boroughs.r)
+
+# Plot using plot(cherry.kde)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out the &lt;a href=&#34;https://cran.r-project.org/web/packages/spatialEco/spatialEco.pdf&#34;&gt;help for &lt;code&gt;spatialEco::sp.kde()&lt;/code&gt;&lt;/a&gt;) for more detail on the options. In this case I used an unweighted KDE, but KDE could have been weighted based on things like condition, size, etc. to give higher importance to different trees.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Geocoding in NYC from R</title>
@@ -18,7 +93,10 @@
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/20180210_geocodingnyc/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the &lt;a href=&#34;https://cran.r-project.org/web/packages/rmapzen/&#34;&gt;rmapzen R package&lt;/a&gt;; see the end of this post for more info.&lt;/em&gt;&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;&lt;em&gt;Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the &lt;a href=&#34;https://cran.r-project.org/web/packages/rmapzen/&#34;&gt;rmapzen R package&lt;/a&gt;; see the end of this post for more info.&lt;/em&gt;&lt;/p&gt;
 &lt;div id=&#34;geocoding&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Geocoding&lt;/h2&gt;
 &lt;p&gt;In GIS and various other fields, Geocoding is a common operation. Not familar with Geocoding? Check out this great definition from &lt;a href=&#34;https://developers.google.com/maps/documentation/geocoding/start&#34;&gt;Google&lt;/a&gt;:&lt;/p&gt;
@@ -102,9 +180,9 @@ misc_addresses &amp;lt;- nycgeocode(addresses)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;&lt;em&gt;Additional Info, added 12 Feb 2018&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Thanks to Twitter, I learned of the &lt;a href=&#34;https://cran.r-project.org/web/packages/rmapzen/&#34;&gt;rmapzen R package&lt;/a&gt;, which is already set up to use Pelias-based geocoding systems. Below is some sample code for a single address… I’ll be curious to explore this more myself. At time of writing, for application with the NYC GeoSearch system, you’ll need to use a dev-version from GitHub, as per the &lt;code&gt;install.packages&lt;/code&gt; line (commented out), which lets you use a custom api.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# devtools::install_github(&amp;quot;tarakc02/rmapzen&amp;quot;, ref = &amp;quot;devel&amp;quot;) 
-library(rmapzen)
-
-# Specify API
+library(rmapzen)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;rmapzen&amp;#39; was built under R version 3.5.3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Specify API
 options(RMAPZEN_SEARCH_HOST = &amp;quot;geosearch.planninglabs.nyc&amp;quot;)
 
 #Specify Mapzen key (NA in this case)
@@ -135,7 +213,7 @@ Sys.setenv(&amp;quot;MAPZEN_KEY&amp;quot; = NA)
 
 &lt;h2 id=&#34;getting-started-with-blogdown&#34;&gt;Getting Started with Blogdown&lt;/h2&gt;
 
-&lt;p&gt;Thankfully, I&amp;rsquo;m far from the first person who&amp;rsquo;s used Blogdown to get a website going, and there&amp;rsquo;s even a &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;free e-book&lt;/a&gt; by &lt;a href=&#34;https://yihui.name&#34;&gt;Yihui Xie&lt;/a&gt;, &lt;a href=&#34;https://amber.rbind.io&#34;&gt;Amber Thomas&lt;/a&gt;, and &lt;a href=&#34;https://alison.rbind.io&#34;&gt;Alison Presmanes Hill&lt;/a&gt; on the topic. There are also numerous blogs, including &lt;a href=&#34;https://tclavelle.github.io/blog/blogdown_github/&#34;&gt;this one&lt;/a&gt; I&amp;rsquo;ve found useful. If you&amp;rsquo;re just getting started, definitely go through the first  chapters of the e-book and try to get something going on your local machine before getting your site online.&lt;/p&gt;
+&lt;p&gt;Thankfully, I&amp;rsquo;m far from the first person who&amp;rsquo;s used Blogdown to get a website going, and there&amp;rsquo;s even a &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;free e-book&lt;/a&gt; by &lt;a href=&#34;https://yihui.name&#34;&gt;Yihui Xie&lt;/a&gt;, &lt;a href=&#34;https://amber.rbind.io&#34;&gt;Amber Thomas&lt;/a&gt;, and &lt;a href=&#34;https://alison.rbind.io&#34;&gt;Alison Presmanes Hill&lt;/a&gt; on the topic. There are also numerous blogs, including &lt;a href=&#34;https://www.tylerclavelle.com/code/2017/blogdown/&#34;&gt;this one&lt;/a&gt; I&amp;rsquo;ve found useful. If you&amp;rsquo;re just getting started, definitely go through the first  chapters of the e-book and try to get something going on your local machine before getting your site online.&lt;/p&gt;
 
 &lt;h3 id=&#34;choosing-a-hugo-theme-and-making-some-minor-changes&#34;&gt;Choosing a Hugo Theme and Making some Minor Changes&lt;/h3&gt;
 

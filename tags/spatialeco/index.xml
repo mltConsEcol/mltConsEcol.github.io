@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spatialeco on Mike Treglia</title>
+    <link>/tags/spatialeco/</link>
+    <description>Recent content in Spatialeco on Mike Treglia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/spatialeco/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cherry Blossom Season in NYC</title>
+      <link>/post/20190331_cherryblossomsnyc/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/20190331_cherryblossomsnyc/</guid>
+      <description>Cherry BlossomsIt’s springtime in New York and cherry trees are starting to bloom. In fact street trees right outside my house in Staten Island are bright pink in flower right now… here’s a photo I took this morning.
+Google searches will reveal a few places you can go to see cherry trees with festivals dedicated to them and such. But there are lots of cherry trees along streets and in parks of NYC.</description>
+    </item>
+    
+  </channel>
+</rss>
