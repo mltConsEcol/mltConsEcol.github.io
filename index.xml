@@ -6,20 +6,308 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Michael L. Treglia.&lt;br&gt;All rights reserved.</copyright>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mltconsecol.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Mike Treglia, PhD</title>
-      <link>https://mltconsecol.github.io/</link>
-      <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+      <title>Posts</title>
+      <link>https://mltconsecol.github.io/post/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/</guid>
-      <description>&lt;p&gt;Welcome to my webpage!&lt;/p&gt;
-&lt;p&gt;My name is Mike Treglia and I work as the Lead Scientist for the Cities program with The Nature Conservancy in New York. In this role I use GIS, Remote Sensing, and statistical tools to characterize the current open space in the city, while thinking about how we can improve the state of biodiversity and develop resilience to climate change. In my work, I leverage vast amounts of open data, and am passionate about developing and sharing open source workflows as possible, in hopes that others will be able to build off of my efforts, without concern for licensing costs.&lt;/p&gt;
-&lt;p&gt;I grew up in Staten Island, NY, and am delighted and privileged to now be working on conservation issues of my entire home city. I am fortunate to have incredible collaborators and partners throughout my work, and incredible mentors throughout my career.&lt;/p&gt;
-&lt;p&gt;I generally try to maintain this website as a place for others to find occasional &lt;a href=&#34;post&#34;&gt;blog posts&lt;/a&gt;, to share a bit about my ongoing and past &lt;a href=&#34;research&#34;&gt;research&lt;/a&gt;, &lt;a href=&#34;code&#34;&gt;code&lt;/a&gt;, and &lt;a href=&#34;teaching&#34;&gt;teaching resources&lt;/a&gt; I&amp;rsquo;ve developed through the years. I hope you find this useful! Feel free to reach out with questions or to connect.&lt;/p&gt;
+      <guid>https://mltconsecol.github.io/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://mltconsecol.github.io/about/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mltconsecol.github.io/about/</guid>
+      <description>&lt;h3 id=&#34;a-bit-about-me&#34;&gt;A Bit About Me:&lt;/h3&gt;
+&lt;p&gt;I work as the Lead Scientist for the Cities program with &lt;a href=&#34;https://www.nature.org/en-us/about-us/where-we-work/united-states/new-york/&#34; target=&#34;_About&#34;&gt;The Nature Conservancy in New York&lt;/a&gt;. In this role I use GIS, Remote Sensing, and statistical tools to characterize dynamics of open space, primarily in New York City. In this work, I look to understand where green space and open space are in various forms (e.g., the urban forest, green roofs), how it is changing through time, who benefits and does not benefit from these resources, and how to maintain and increase them. This work is all done through multiple lenses including equity, climate resiliency, and biodiversity conservation. I grew up in Staten Island, NY, and have been working for The Nature Conservancy in NY since 2015. It is a delight and a privilege to be working on these issues in my home city.&lt;/p&gt;
+&lt;p&gt;Prior to my current position I workd as a Postdoctoral Scholar at the University of Tulsa, with &lt;a href=&#34;http://ronbonett.weebly.com/&#34; target=&#34;_About&#34;&gt;Dr. Ron Bonett&lt;/a&gt; as part of the NSF-Funded &lt;a href=&#34;http://www.okepscor.org/&#34; target=&#34;_About&#34;&gt;Oklahoma EPSCoR program&lt;/a&gt;. There I taught courses on &lt;a href=&#34;http://mltconsecol.github.io/TU_LandscapeAnalysis_Documents&#34; target=&#34;_About&#34;&gt; spatial analysis &lt;/a&gt;, conducted research on environmental drivers of alternative life histories in salamanders, and worked on preparing Oklahoma LiDAR data for use by other researchers in the state.&lt;/p&gt;
+&lt;p&gt;I completed my PhD at Texas A&amp;amp;M University in the Department of Wildlife and Fisheries Sciences.  My general research interests are in the fields of landscape ecology and conservation biology, with an emphasis on amphibians and reptiles. My dissertation research focused on understanding how anthropogenic landscape alterations impact amphibians indirectly, through large-scale processes. I conducted this work as part of the &lt;a href=&#34;http://biodiversity.tamu.edu&#34; target=&#34;_About&#34;&gt;Applied Biodiversity Sciences IGERT program&lt;/a&gt; (NSF-Funded) at Texas A&amp;amp;M.&lt;/p&gt;
+&lt;h3 id=&#34;education&#34;&gt;Education:&lt;/h3&gt;
+&lt;p&gt;Doctor of Philosophy (2014) Texas A&amp;amp;M
+University, Department of Wildlife and Fisheries, Advised by Dr. Lee
+Fitzgerald. Dissertation Title: &lt;em&gt;Multi-Scale Conservation in an Altered Landscape: The Case of the Endangered Arroyo Toad in Southern California&lt;/em&gt; (&lt;a href=&#34;./research/Treglia2014_Dissertation.pdf&#34;&gt;Click Here to view as a PDF&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Masters of Science (2010) Texas A&amp;amp;M
+University, Department of Wildlife and Fisheries, Advised by Dr. Lee
+Fitzgerald. Thesis Title: &lt;em&gt;A Translocated Population of the St. Croix Ground Lizard: Analyzing its Detection Probability and Investigating Its Impacts on the Local Prey Base&lt;/em&gt; (&lt;a href=&#34;./research/Treglia2010_Thesis.pdf&#34;&gt;Click Here to view as a PDF&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Bachelors of Science (2007) Cornell University, Department of Natural Resources.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;TregliaCV.pdf&#34;&gt;Click here to download my CV&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>https://mltconsecol.github.io/code/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mltconsecol.github.io/code/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;#ibuttons&#34;&gt;iButton Data Organizer&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;#netcdf&#34;&gt;NetCDF Data Access&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;#lastools&#34;&gt;LAStools Wrapper Functions from R&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;I primarily use &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt; for scientific computing, but also dabble in &lt;a href=&#34;https://www.gnu.org/software/bash/&#34;&gt;bash&lt;/a&gt;, and use &lt;a href=&#34;https://en.wikipedia.org/wiki/SQL&#34;&gt;SQL&lt;/a&gt; a fair bit for spatial stuff, working from &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt;/&lt;a href=&#34;https://postgis.net/&#34;&gt;PostGIS&lt;/a&gt; databases.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll disclaim that I have limited formal training in coding, but have been really fortunate for opportunities to improve my skills through a few opportunities I&amp;rsquo;d encourage others to look into. First, in 2014 I attended a joint &lt;a href=&#34;https://www.nceas.ucsb.edu/&#34;&gt;NCEAS&lt;/a&gt;/&lt;a href=&#34;http://renci.org/&#34;&gt;RENCI&lt;/a&gt; Open Science for Synthesis session, focused in training early career scientists useful computing tools to allow for reproducible research. This was a 3-week intensive course that covered a lot, and got me comfortable using some valuable and common tools of the trade. I&amp;rsquo;d highly recommend this to others.&lt;/p&gt;
+&lt;p&gt;Also, during my Postdoc at the University of Tulsa, I was able to engage in the emerging &lt;a href=&#34;https://software-carpentry.org/&#34;&gt;Software Carpentry&lt;/a&gt; community at Oklahoma State University. Software Carpentry (and the sibling &lt;a href=&#34;http://www.datacarpentry.org/&#34;&gt;Data Carpentry&lt;/a&gt;) is dedicated to teaching researchers computing skills to be more efficient and conduct reproducible research. They offer courses in a variety of tools, including Git, R, Python, Bash, and SQL, among others. Furthermore, they have a strong emphasis on pedagogy, using tried and true principles with the learners. If you are new to coding and have an opportunity, I highly recommend workshops from the Carpentries.&lt;/p&gt;
+&lt;p&gt;Below I&amp;rsquo;ve listed a few things I&amp;rsquo;ve worked on, which I hope others might find useful. My code can largely be found on two GitHub accounts; &lt;a href=&#34;https://github.com/mltConsEcol&#34;&gt;mltConsEcol&lt;/a&gt; is set up more for collaboration and such, and &lt;a href=&#34;https://github.com/mtreg/&#34;&gt;mtreg&lt;/a&gt; is generally for smaller, one-off types of projects.&lt;/p&gt;
+&lt;h2 id=&#34;a-nameibuttonsaibutton-data-organizer&#34;&gt;&lt;a name=&#34;ibuttons&#34;&gt;&lt;/a&gt;iButton Data Organizer&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.maximintegrated.com/en/products/digital/ibutton.html&#34;&gt;iButtons&lt;/a&gt; are temperature and/or humidity loggers commonly used in environmental monitoring. However, using the readily-available tools, synchronizing the timing of data collection across multiple iButtons is not necessarily easy, though it&amp;rsquo;s necessary to line up timestamps for easy comparison and further analysis/processing.  Thus, as part of work from my Postdoc, I put together a bunch of R code to allow for easier processing. It&amp;rsquo;s currently available as an &lt;a href=&#34;https://github.com/mltConsEcol/iButtonDataOrganizer&#34;&gt;R package via GitHub&lt;/a&gt;. See the package page on GitHub for installation instructions.  I&amp;rsquo;m not currently using iButtons, so have not been further developing the package, but reach out with questions or post an issue via GitHub.&lt;/p&gt;
+&lt;h2 id=&#34;a-namenetcdfanetcdf-data-access&#34;&gt;&lt;a name=&#34;netcdf&#34;&gt;&lt;/a&gt;NetCDF Data Access&lt;/h2&gt;
+&lt;p&gt;Some of the datasets I use are distributed as NetCDF files, which can be complex, involving multiple strata of data (e.g., multiple depths in the ocean) and with many time points.  As of this writing, two main datasets I&amp;rsquo;ve worked with are the &lt;a href=&#34;http://hudson.dl.stevens-tech.edu/maritimeforecast/&#34;&gt;NY Harbor Observation and Prediction System (NYHOPS)&lt;/a&gt; and &lt;a href=&#34;http://www.scrimhub.org/resources/topowx/&#34;&gt;TopoWx (TopoWeather)&lt;/a&gt;. Thus, you can find some code I&amp;rsquo;ve developed for accessing these data on &lt;a href=&#34;https://github.com/mltConsEcol/misc_netCDF_access&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: this will likely not work on Windows due to lacking dependencies for the ncdf4 package. I tend to set up a Linux virtual machine via &lt;a href=&#34;https://www.virtualbox.org&#34;&gt;VirtualBox&lt;/a&gt; for this work.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;a-namelastoolsalastools-wrapper-functions-from-r&#34;&gt;&lt;a name=&#34;lastools&#34;&gt;&lt;/a&gt;LAStools Wrapper Functions from R&lt;/h2&gt;
+&lt;p&gt;In the past I&amp;rsquo;ve done some pre-processing of LiDAR data for the state of Oklahoma, and set up some R code to functionally script some things from R using a powerful software package, &lt;a href=&#34;https://rapidlasso.com/lastools/&#34;&gt;LAStools&lt;/a&gt;. The code is simply set up as R functions within a &lt;a href=&#34;https://github.com/mltConsEcol/OK_LiDAR_Processing&#34;&gt;GitHub Repository&lt;/a&gt;, largely to check, and organize metadata, and correct projection information. Realizing how prevalent LiDAR data has become, I&amp;rsquo;d be happy for others to use the code as-is, if helpful, or build off of it (and if you do, please reach out to me).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://mltconsecol.github.io/contact/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mltconsecol.github.io/contact/</guid>
+      <description>&lt;h3 id=&#34;e-mail&#34;&gt;E-mail&lt;/h3&gt;
+&lt;p&gt;Work: michael.treglia(at)tnc.org &lt;br/&gt;
+Personal: mtreglia(at)gmail.com&lt;/p&gt;
+&lt;h3 id=&#34;mailing-address&#34;&gt;Mailing Address&lt;/h3&gt;
+&lt;p&gt;Michael Treglia &lt;br/&gt;
+The Nature Conservancy &lt;br/&gt;
+322 8th Ave, 14th Floor &lt;br/&gt;
+New York, NY 10001 &lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Photography</title>
+      <link>https://mltconsecol.github.io/photography/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mltconsecol.github.io/photography/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;css/blueimp-gallery.min.css&#34;&gt;
+&lt;!-- The Gallery as lightbox dialog, should be a child element of the document body --&gt;
+&lt;div id=&#34;blueimp-gallery&#34; class=&#34;blueimp-gallery blueimp-gallery-controls&#34;&gt;
+    &lt;div class=&#34;slides&#34;&gt;&lt;/div&gt;
+    &lt;h3 class=&#34;title&#34;&gt;&lt;/h3&gt;
+    &lt;a class=&#34;prev&#34;&gt;‹&lt;/a&gt;
+    &lt;a class=&#34;next&#34;&gt;›&lt;/a&gt;
+    &lt;a class=&#34;close&#34;&gt;×&lt;/a&gt;
+    &lt;a class=&#34;play-pause&#34;&gt;&lt;/a&gt;
+    &lt;ol class=&#34;indicator&#34;&gt;&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p&gt;Photography is a hobby and a passion for me. I try to take my camera on various travels, hikes, and when I get  time with my family (especially for photos of the nephew and the dog). Here is a selection of some of my favorites, hosted via the open source &lt;a href=&#34;https://github.com/blueimp/Gallery/&#34;&gt;blueimp gallery&lt;/a&gt; scripts, and feel free to check out my &lt;a href=&#34;https://www.instagram.com/m1ketreglia/&#34;&gt;Instagram feed&lt;/a&gt;. All photos are presented here copyrighted. If you are interested in prints, or using any of my photos publicly, on another website, etc., please reach out to me.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#norway2018&#34;&gt;Bergen, Norway - 2018&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h1 id=&#34;script-srcjsblueimp-galleryminjsscript&#34;&gt;&lt;script src=&#34;js/blueimp-gallery.min.js&#34;&gt;&lt;/script&gt;&lt;/h1&gt;
+&lt;script src=&#34;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;js/jquery.blueimp-gallery.min.js&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;a-namenorway2018abergen-norway---2018&#34;&gt;&lt;a name=&#34;norway2018&#34;&gt;&lt;/a&gt;Bergen, Norway - 2018&lt;/h2&gt;
+&lt;div id=&#34;norway&#34;&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_009.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_009.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_027.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_027.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_031.JPG&#34;  data-gallery&gt;
+		&lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_031.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_043.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_043.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_044.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_044.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_103.JPG&#34;	data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_103.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_128.JPG&#34; data-gallery&gt;
+		&lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_128.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_145.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_145.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_150.JPG&#34;  data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_150.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180112_154.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180112_154.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_204.JPG&#34; data-gallery&gt;
+		&lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_204.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_206.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_206.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;images/Bergen_Norway_20180113_230.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_230.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_240.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_240.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_259.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_259.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_276.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_276.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_282.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_282.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_304.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_304.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_317.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_317.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_322.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_322.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_338.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_338.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_347.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_347.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180113_351.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180113_351.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180114_401.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_401.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180114_466.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_466.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180114_478.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_478.jpg&#34;&gt;
+    &lt;/a&gt;	
+	&lt;a href=&#34;images/Bergen_Norway_20180114_483.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_483.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180114_492.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_492.jpg&#34;&gt;
+    &lt;/a&gt;	
+	&lt;a href=&#34;images/Bergen_Norway_20180114_500.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_500.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180114_516.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_516.jpg&#34;&gt;
+    &lt;/a&gt;	
+	&lt;a href=&#34;images/Bergen_Norway_20180114_572.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_572.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180114_579.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_579.jpg&#34;&gt;
+    &lt;/a&gt;	
+	&lt;a href=&#34;images/Bergen_Norway_20180114_595.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_595.jpg&#34;&gt;
+    &lt;/a&gt;
+	&lt;a href=&#34;images/Bergen_Norway_20180114_614.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_614.jpg&#34;&gt;
+    &lt;/a&gt;	
+	&lt;a href=&#34;images/Bergen_Norway_20180114_622.JPG&#34; data-gallery&gt;
+        &lt;img src=&#34;images/thumbs/Bergen_Norway_20180114_622.jpg&#34;&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;script&gt;
+document.getElementById(&#39;links&#39;).onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName(&#39;a&#39;);
+    blueimp.Gallery(links, options);
+};
+&lt;/script&gt;&lt;blockquote&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://mltconsecol.github.io/research/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mltconsecol.github.io/research/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;#publications&#34;&gt;Click here for a list of my peer-reviewed publications&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;#other_works&#34;&gt;Click here for a list of select other works&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;../about/TregliaCV.pdf&#34;&gt;Click here for my complete CV&lt;/a&gt;&lt;br/&gt;
+&lt;em&gt;Note: If there are any works for which a PDF is not available but you would like a copy, please email me&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;current-work&#34;&gt;Current Work&lt;/h3&gt;
+&lt;p&gt;My current work is broadly focused on using statistical and and GIS tools to inform conservation efforts. Working for the Cities program with The Nature Conservancy in New York, I use available remote sensing data and GIS datasets to characterize dynamics of open space and green space (e.g., tree canopy, green roofs). I primarily work to understand how these assets are distributed across NYC (e.g., are they equitably distributed), how they are changing through time, what types of benefits they are providing (and to whom), and how they can be better distributed or increased to improve the environment in NY for both people and biodiversity. I also work with partners and colleagues to communicate this work to various audiences.&lt;/p&gt;
+&lt;p&gt;Of note, I collaborated with partners to develop a dataset representing green roofs in NYC as of 2016. A peer reviewed manuscript is underway, describing methods and some conclusions, though the data are available &lt;a href=&#34;https://zenodo.org/record/1469674&#34; target=&#34;_About&#34;&gt;here&lt;/a&gt;. An update for this dataset is also underway. I am also working on a large body of collaborative research and analysis about the state of the urban forest of New York City. 
+&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;postdoc-research&#34;&gt;Postdoc Research&lt;/h3&gt;
+&lt;p&gt;My main research at the University of Tulsa was focused on understanding how life history traits of amphibians may play into effects of climate change. I also worked with a student on understanding the potential changes of Juniper trees across the continental U.S., and was involved in processing LiDAR data for researchers across the state.
+&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dissertation-research&#34;&gt;Dissertation Research&lt;/h3&gt;
+&lt;p&gt;My dissertation research  focused on the endagered arroyo toad (&lt;i&gt;Anaxyrus californicus&lt;/i&gt;), endemic to southern California, USA, and northern Baja California, MX. I studied  how the species&#39; distribution may have changed in a portion of its range, and how alterations to land cover patterns are influencing such changes. In this research I used a combination of presence-only and presence/absence species distribution modeling approaches, remote sensing and landscape analysis techniques, and path analysis to understand how watershed-scale changes are influencing habitat critical for arroyo toads, in and along streams.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;Treglia2014_Dissertation.pdf&#34;&gt;Click Here to view my full dissertation as a PDF&lt;/a&gt; and see below for relevant publications.&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;masters-research&#34;&gt;Masters Research&lt;/h3&gt;
+&lt;p&gt;My Masters research was focused on the St. Croix Ground Lizard (&lt;i&gt;Ameiva polops&lt;/i&gt;), an endangered lizard that is endemic to St. Croix, US Virgin Islands. The species is extirpated from the main island of St. Croix due to predation by invasive mongooses, and remains on small islands off the coast of St. Croix. With the National Park Service and U.S. Fish and Wildlife Service we translocated the species from Green Cay National Wildlife Refuge to Buck Island Reef National Monument. The  St. Croix Ground Lizard was presumably present there until the arrival of mongooses, which were eradicated there by the mid 1990s. &lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;We translocated 57 lizards and housed them on Buck Island in a series of 10m x 10m open enclosures (at a density of 700/hectare). The lizards were released to the rest of the island after 9 weeks. The period during which they were enclosed was used to determine detection probability of the species, and to assess the impact of their presence on their invertebrate prey base.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;Treglia2010_Thesis.pdf&#34;&gt;Click Here to view my full thesis as a PDF&lt;/a&gt; and see below for relevant publications.&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;earlier-work&#34;&gt;Earlier work&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Invasion of &lt;i&gt;Anolis sagrei&lt;/i&gt; on St. Vincent, West Indies&lt;/b&gt;&lt;br /&gt; &lt;br&gt;
+During a Research Experience for Undergraduates with Dr. Robert Powell at Avila University, I studied the invasion of the Cuban Brown Anole &lt;i&gt;Anolis sagrei&lt;/i&gt; on St. Vincent. This species has been dispersed throughout much of the tropical world by accidental transport with building materials. Our study focused on the &lt;br&gt;
+potential impacts that the species has on native Anoles in St. Vincent. We did not see any definitive effects, though our data suggest that in the presence of &lt;i&gt;Anolis sagrei&lt;/i&gt;, the native &lt;i&gt;Anolis trinitatis&lt;/i&gt; may increase its perch height. &lt;br&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;a-namepublicationsapeer-reviewed-publications&#34;&gt;&lt;a name=&#34;publications&#34;&gt;&lt;/a&gt;Peer-Reviewed Publications&lt;/h3&gt;
+&lt;p&gt;Clay, T.A., M.A. Steffen, &lt;strong&gt;M.L. Treglia&lt;/strong&gt;, C.D. Torres, A.L. Trujano-Alvarez, and R.M. Bonett. 2019. Multiple stressors produce differential transcriptomic patterns in a stream-dwelling salamander. BMC Genomics 20(1):482. DOI: 10.1186/s12864-019-5814-y &lt;a href=&#34;Clayetal2019_BMCGenomics.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; | &lt;strong&gt;&lt;a href=&#34;https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-5814-y&#34; target=&#34;_About&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, A.C. Landon, R.N. Fisher, G. Kyle, L.A. Fitzgerald. 2018. Multi-scale effects of land cover and urbanization on the habitat suitability of an endangered toad. Biological Conservation 228, 310–318. DOI: 10.1016/j.biocon.2018.10.032. &lt;strong&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/abs/pii/S0006320718309601?via%3Dihub&#34; target=&#34;_About&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Wang, H.-H., C.L. Wonkka, &lt;strong&gt;M.L. Treglia&lt;/strong&gt;, W.E. Grant, F.E. Smeins, and W.E. Rogers. 2018. Incorporating local-scale variables into distribution models enhances predictability for rare plant species with biological dependencies. &lt;i&gt;Biodiversity and Conservation&lt;/i&gt;:1–12. DOI: 10.1007/s10531-018-1645-4 &lt;strong&gt;&lt;a href=&#34;https://link.springer.com/article/10.1007%2Fs10531-018-1645-4&#34; target=&#34;_About&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Schaffer-Smith, D., S. Tomasha, K. Jarvis, D. Maguire, &lt;strong&gt;M.L. Treglia&lt;/strong&gt;, J. Liu. 2018. Network analysis as a tool for quantifying the dynamics of metacoupled systems: an example using global soybean trade. &lt;i&gt;Ecology and Society&lt;/i&gt;: 23(4):3 DOI: 10.5751/ES-10460-230403 &lt;a href=&#34;Schaffer-Smith_etal2018_EandSociety_Metacoupling.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; | &lt;strong&gt;&lt;a href=&#34;https://www.ecologyandsociety.org/vol23/iss4/art3/ target=&#34;_About&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Liu, J., Y. Dou, M. Batistella, E. Challies, T. Connor, C. Friis, J.D.A. Millington, E. Parish, C.L. Romulo, R.F.B. Silva, H. Triezenberg, H. Yang, Z. Zhao, K.S. Zimmerer, F. Huettmann, &lt;strong&gt;M.L. Treglia&lt;/strong&gt;, et al. 2018. Spillover systems in a telecoupled Anthropocene: typology, methods, and governance for global sustainability. &lt;i&gt;Current Opinion in Environmental Sustainability&lt;/i&gt;. DOI: 10.1016/j.cosust.2018.04.009. &lt;strong&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/abs/pii/S187734351730283X?via%3Dihub&#34; target=&#34;_About&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, R.N. Fisher, and L.A. Fitzgerald. 2015. Integrating Multiple Distribution Models to Guide Conservation Efforts of an Endangered Toad. &lt;i&gt;PLoS ONE&lt;/i&gt; DOI: 10.1371/journal.pone.0131628. &lt;strong&gt;&lt;a href=&#34;Treglia_etal2015_PLoSONE_ATDistributionModel.pdf&#34;&gt;PDF&lt;/strong&gt;&lt;/a&gt; | &lt;strong&gt;&lt;a href=&#34;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131628&#34; target=&#34;_About&#34;&gt;Journal Website &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Fitzgerald, L.A., M.L. Treglia, N. Angeli, T.J. Hibbitts, D.J. Leavitt, A.L. Subalusky, I. Lundgren, I. and Z. Hillis-Starr. 2015. Determinants of successful establishment and post-translocation dispersal of a new population of the critically endangered St. Croix ground lizard (&lt;i&gt;Ameiva polops&lt;/i&gt;). &lt;i&gt;Restoration Ecology&lt;/i&gt; DOI: 10.1111/rec.12248. &lt;strong&gt;&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/rec.12248/abstract&#34; target=&#34;_About&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Wang, H.-H., C.L. Wonkka, &lt;strong&gt;M.L. Treglia&lt;/strong&gt;, W.E. Grant, F.E. Smeins, W.E. Rogers. 2015. Species distribution modeling for conservation of an endangered and endemic orchid. &lt;i&gt;AoB Plants&lt;/i&gt; DOI: 10.1093/aobpla/plv039. &lt;a href=&#34;Wang_etal2015_AoBPlants_LadiesTresses.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; | &lt;strong&gt;&lt;a href=&#34;http://aobpla.oxfordjournals.org/content/7/plv039&#34; target=&#34;_About&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, J. Valiulis, D. J. Leavitt, and L.A. Fitzgerald. 2013. Establishment of the Puerto Rican Ground Lizard (&lt;i&gt;Ameiva exsul&lt;/i&gt;: Teiidae), on St. Croix, U.S. Virgin Islands: a threat to native fauna. &lt;i&gt;Caribbean Journal of Science&lt;/i&gt; 47(2-3). &lt;a href=&#34;Treglia_etal2013_CaribJSci_Ameiva_exsul.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; | &lt;strong&gt;&lt;a href=&#34;http://caribjsci.org/.org&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Treglia M.L.&lt;/strong&gt; and L.A. Fitzgerald. 2011. Translocation of the St. Croix ground lizard to Buck Island Reef National Monument, St. Croix, U.S. Virgin Islands. Pp. 109-115. In. Soorae P.S. (ed.) (2011). &lt;i&gt;Global Re-introduction Perspectives: 2011. More case studies from around the globe&lt;/i&gt;. Gland, Switzerland: IUCN/SSC Re-introduction Specialist Group and Abu Dhabi, UAE: Environment Agency-Abu Dhabi. Xiv +250 pp. &lt;a href=&#34;TregliaFitzgerald2011_RSGBook_Ameiva_polops.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt; | &lt;strong&gt;&lt;a href=&#34;http://www.iucnsscrsg.org/index.php?option=com_content&amp;view=article&amp;id=192&amp;Itemid=587&#34;&gt;Click Here for a Link to the Full Book&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, O. Ramirez. 2009. &lt;i&gt;Nerodia rhombifer&lt;/i&gt;. Geographic distribution. &lt;i&gt;Herpetological Review&lt;/i&gt; 40(2):238. &lt;strong&gt;&lt;a href=&#34;https://ssarherps.org/herpetological-review-pdfs/&#34;&gt;Journal Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt;, A.J. Muensch, R.
+Powell, and J.S. Parmerlee, Jr. 2008. An invasive anole: &lt;i&gt;Anolis
+sagrei&lt;/i&gt; on St. Vincent and its potential impact on native
+anoles. &lt;i&gt;Caribbean Journal of Science&lt;/i&gt; 44(2):251-256. &lt;a href=&#34;Treglia_etal2008_CaribJSci_Anolis_sagrei.pdf&#34;&gt;&lt;strong&gt;PDF&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Henderson,R.W., &lt;strong&gt;M.L. Treglia&lt;/strong&gt;,
+and S.D. Powell. 2007. &lt;i&gt;Corallus cookii&lt;/i&gt;. Foraging.
+&lt;i&gt;Herpetological Review&lt;/i&gt; 38(4):466&lt;/p&gt;
+&lt;p&gt;Powell, S. D., &lt;strong&gt;M. L. Treglia&lt;/strong&gt;, R.
+W. Henderson, and R. Powell. 2007. Treeboas in the West Indies:
+Responses of &lt;i&gt;Corallus cookii&lt;/i&gt; and &lt;i&gt;C.
+grenadensis&lt;/i&gt; to disturbed habitats. In: R. W. Henderson and
+R.Powell (eds.). &lt;i&gt;Biology of the Boas and Pythons&lt;/i&gt;. Eagle Mountain Publ.,
+Eagle Mountain, Utah.&lt;/p&gt;
+&lt;h3 id=&#34;a-nameother_worksaselect-other-works&#34;&gt;&lt;a name=&#34;other_works&#34;&gt;&lt;/a&gt;Select Other Works&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt; and A. Van Slooten. 2020. Identifying opportunities to increase green roofs in NYC: where they are most needed. &lt;i&gt;Living Architecture Monitor&lt;/i&gt;: Summer 2020 (28-31). &lt;strong&gt;&lt;a href=Treglia_VanSlooten_LAM.pdf&gt;PDF&lt;/a&gt;&lt;/strong&gt; | &lt;strong&gt;&lt;a href=&#34;https://livingarchitecturemonitor.com/&#34; target=&#34;_About&#34;&gt;Publication Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Daut, E. F., K. Dennis, E. Gómez-Ruiz, Z. Hurst, K. A. Roach, A. N. Santos, D. Toledo, &lt;strong&gt;M. L. Treglia&lt;/strong&gt;, C. J. van Riper, and M. A. Wood. 2013. Reaching toward outward accountability of environmental non-governmental organizations. &lt;i&gt;Applied Biodiversity Sciences Perspectives Series&lt;/i&gt; 3:1-6.&lt;strong&gt;&lt;a href=&#34;Daut_etal_2013_ABS.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/strong&gt; | &lt;strong&gt;&lt;a href=&#34;https://biodiversity.tamu.edu/communications/perspectives-series/&#34; target=&#34;_About&#34;&gt;Publication Website&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt; 2008. Kraig Adler:
+A lifetime promoting herpetology. &lt;i&gt;Iguana&lt;/i&gt; 15(4):234&amp;ndash;237.&lt;a href=&#34;Treglia-AdlerProfile.pdf&#34;&gt;&lt;strong&gt; PDF&lt;/strong&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Treglia, M.L.&lt;/strong&gt; 2006. An annotated
+checklist of the amphibians and reptiles of St. Vincent, West Indies.
+&lt;i&gt;Iguana&lt;/i&gt; 13(4):252&amp;ndash;263. &lt;strong&gt;&lt;a href=&#34;Treglia_Iguana13.4_252_263.pdf&#34; =&#34;&#34;&gt;PDF&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://mltconsecol.github.io/teaching/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mltconsecol.github.io/teaching/</guid>
+      <description>&lt;h3 id=&#34;a-hrefhttpmltconsecolgithubioqgis-tutorial-target_about-qgis-tutoriala&#34;&gt;&lt;a href=&#34;http://mltconsecol.github.io/QGIS-Tutorial/&#34; target=&#34;_About&#34;&gt; QGIS Tutorial&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.qgis.org&#34; target=&#34;_About&#34;&gt;QGIS&lt;/a&gt; is a well-developed, open source GIS program, with a wide range of features and great compatability with numerous formats. Furthermore, basic installation includes linkages with other open source GIS tools such as &lt;a href=&#34;https://grass.osgeo.org/&#34; target=&#34;_About&#34;&gt;GRASS GIS&lt;/a&gt; and &lt;a href=&#34;http://saga-gis.org/&#34; target=&#34;_About&#34;&gt;SAGA&lt;/a&gt; (among others). It is one primary software packages that I use in research and teach in classes.&lt;/p&gt;
+&lt;p&gt;This tutorial is designed to familiarize GIS users with the general layout, features and tools of QGIS, through working with sample datasets that are provided. It begins with import and projection of spatial data (for vector and raster datasets), goes into some geoprocessing steps, and finishes up with producing and exporting a map. This material was originally developed for a workshop at Texas A&amp;amp;M University,though I update it periodically for a class I taught at the University of Tulsa. It was most recently updated for QGIS v. 2.12.2 (13 Jan 2016),and is generally relevant for 2.x versions.&lt;/p&gt;
+&lt;h3 id=&#34;a-hrefhttpmltconsecolgithubiotu_landscapeanalysis_documents-target_aboutlandscape-analysis-and-modelinga&#34;&gt;&lt;a href=&#34;http://mltconsecol.github.io/TU_LandscapeAnalysis_Documents&#34; target=&#34;_About&#34;&gt;Landscape Analysis and Modeling&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;At the &lt;a href=&#34;http://www.utulsa.edu&#34; target=&#34;_About&#34;&gt;University of Tulsa&lt;/a&gt;, I taught a course called &amp;ldquo;Landscape Analysis and Modeling&amp;rdquo;, which covers a bit of basic GIS and statistics, and goes into a variety of spatial analyses. It is designed to familiarize students with landscape ecological techniques and tools, which they may employ in their own projects. All labs take advantage of freely available software including &lt;a href=&#34;http://www.qgis.org&#34; target=&#34;_About&#34;&gt;QGIS&lt;/a&gt;, &lt;a href=&#34;http://cran.us.r-project.org/&#34; target=&#34;_About&#34;&gt;R&lt;/a&gt;,  &lt;a href=&#34;http://www.passagesoftware.net/&#34; target=&#34;_About&#34;&gt;Passage&lt;/a&gt;, and &lt;a href=&#34;http://www.umass.edu/landeco/research/fragstats/fragstats.html&#34; target=&#34;_About&#34;&gt;Fragstats&lt;/a&gt;, and most use publically available datasets, to effectively present tutorals on various topics. The syllabus from last time the class was offered is available &lt;a href=&#34;./LandscapeAnalysis_Syllabus.pdf&#34; target=&#34;_About&#34;&gt;here&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;
+I make lab materials for this course freely available on a public course website (above), and in the form of a &lt;a href=&#34;https://github.com/&#34; target=&#34;_About&#34;&gt;GitHub repository&lt;/a&gt;. Though these materials accompany related lectures in the class (not publically available at the current time), they should be generally useful for people interested in learning about spatial analysis.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;The above materials were originally developed with support from the &lt;a href=&#34;http://www.okepscor.org/&#34; target=&#34;_About&#34;&gt;Oklahoma NSF-EPSCoR Program&lt;/a&gt; (Grant IIA-1301789).&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
