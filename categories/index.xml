@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Mike Treglia</title>
+    <link>https://mltconsecol.github.io/categories/</link>
+    <description>Recent content in Categories on Mike Treglia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Michael L. Treglia.&lt;br&gt;All rights reserved.</copyright>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mltconsecol.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spatial</title>
+      <link>https://mltconsecol.github.io/categories/spatial/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mltconsecol.github.io/categories/spatial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Development</title>
+      <link>https://mltconsecol.github.io/categories/web-development/</link>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mltconsecol.github.io/categories/web-development/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

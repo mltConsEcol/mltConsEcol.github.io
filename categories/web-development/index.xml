@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blogdown on Mike Treglia</title>
-    <link>https://mltconsecol.github.io/tags/blogdown/</link>
-    <description>Recent content in blogdown on Mike Treglia</description>
+    <title>Web Development on Mike Treglia</title>
+    <link>https://mltconsecol.github.io/categories/web-development/</link>
+    <description>Recent content in Web Development on Mike Treglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Michael L. Treglia.&lt;br&gt;All rights reserved.</copyright>
-    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://mltconsecol.github.io/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://mltconsecol.github.io/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Going with Blogdown &amp; Hugo</title>
       <link>https://mltconsecol.github.io/post/20170123_blogdown_hugo/</link>
