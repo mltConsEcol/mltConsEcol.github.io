@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>spatial on MikeTreglia</title>
-    <link>https://www.example.com/tags/spatial/</link>
+    <link>https://mltconsecol.github.io/tags/spatial/</link>
     <description>Recent content in spatial on MikeTreglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Michael L. Treglia&lt;br/&gt;All rights reserved.</copyright>
-    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.example.com/tags/spatial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mltconsecol.github.io/tags/spatial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cherry Blossom Season in NYC</title>
-      <link>https://www.example.com/post/20190331_cherryblossomsnyc/</link>
+      <link>https://mltconsecol.github.io/post/20190331_cherryblossomsnyc/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/post/20190331_cherryblossomsnyc/</guid>
+      <guid>https://mltconsecol.github.io/post/20190331_cherryblossomsnyc/</guid>
       <description>Cherry BlossomsIt’s springtime in New York and cherry trees are starting to bloom. In fact street trees right outside my house in Staten Island are bright pink in flower right now… here’s a photo I took this morning.
 Google searches will reveal a few places you can go to see cherry trees with festivals dedicated to them and such. But there are lots of cherry trees along streets and in parks of NYC.</description>
     </item>
     
     <item>
       <title>Geocoding in NYC from R</title>
-      <link>https://www.example.com/post/20180210_geocodingnyc/</link>
+      <link>https://mltconsecol.github.io/post/20180210_geocodingnyc/</link>
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/post/20180210_geocodingnyc/</guid>
+      <guid>https://mltconsecol.github.io/post/20180210_geocodingnyc/</guid>
       <description>Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the rmapzen R package; see the end of this post for more info.
 GeocodingIn GIS and various other fields, Geocoding is a common operation. Not familar with Geocoding? Check out this great definition from Google:
 Geocoding is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.</description>

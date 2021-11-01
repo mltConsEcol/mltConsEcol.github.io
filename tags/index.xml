@@ -2,135 +2,135 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on MikeTreglia</title>
-    <link>https://www.example.com/tags/</link>
+    <link>https://mltconsecol.github.io/tags/</link>
     <description>Recent content in Tags on MikeTreglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Michael L. Treglia&lt;br/&gt;All rights reserved.</copyright>
-    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mltconsecol.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KDE</title>
-      <link>https://www.example.com/tags/kde/</link>
+      <link>https://mltconsecol.github.io/tags/kde/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/kde/</guid>
+      <guid>https://mltconsecol.github.io/tags/kde/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mapview</title>
-      <link>https://www.example.com/tags/mapview/</link>
+      <link>https://mltconsecol.github.io/tags/mapview/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/mapview/</guid>
+      <guid>https://mltconsecol.github.io/tags/mapview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NYC</title>
-      <link>https://www.example.com/tags/nyc/</link>
+      <link>https://mltconsecol.github.io/tags/nyc/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/nyc/</guid>
+      <guid>https://mltconsecol.github.io/tags/nyc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>opendata</title>
-      <link>https://www.example.com/tags/opendata/</link>
+      <link>https://mltconsecol.github.io/tags/opendata/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/opendata/</guid>
+      <guid>https://mltconsecol.github.io/tags/opendata/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://www.example.com/tags/r/</link>
+      <link>https://mltconsecol.github.io/tags/r/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/r/</guid>
+      <guid>https://mltconsecol.github.io/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sf</title>
-      <link>https://www.example.com/tags/sf/</link>
+      <link>https://mltconsecol.github.io/tags/sf/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/sf/</guid>
+      <guid>https://mltconsecol.github.io/tags/sf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spatial</title>
-      <link>https://www.example.com/tags/spatial/</link>
+      <link>https://mltconsecol.github.io/tags/spatial/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/spatial/</guid>
+      <guid>https://mltconsecol.github.io/tags/spatial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spatialEco</title>
-      <link>https://www.example.com/tags/spatialeco/</link>
+      <link>https://mltconsecol.github.io/tags/spatialeco/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/spatialeco/</guid>
+      <guid>https://mltconsecol.github.io/tags/spatialeco/</guid>
       <description></description>
     </item>
     
     <item>
       <title>trees</title>
-      <link>https://www.example.com/tags/trees/</link>
+      <link>https://mltconsecol.github.io/tags/trees/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/trees/</guid>
+      <guid>https://mltconsecol.github.io/tags/trees/</guid>
       <description></description>
     </item>
     
     <item>
       <title>geocoding</title>
-      <link>https://www.example.com/tags/geocoding/</link>
+      <link>https://mltconsecol.github.io/tags/geocoding/</link>
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/geocoding/</guid>
+      <guid>https://mltconsecol.github.io/tags/geocoding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blogdown</title>
-      <link>https://www.example.com/tags/blogdown/</link>
+      <link>https://mltconsecol.github.io/tags/blogdown/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/blogdown/</guid>
+      <guid>https://mltconsecol.github.io/tags/blogdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>https://www.example.com/tags/r-markdown/</link>
+      <link>https://mltconsecol.github.io/tags/r-markdown/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/r-markdown/</guid>
+      <guid>https://mltconsecol.github.io/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rmd</title>
-      <link>https://www.example.com/tags/rmd/</link>
+      <link>https://mltconsecol.github.io/tags/rmd/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/rmd/</guid>
+      <guid>https://mltconsecol.github.io/tags/rmd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web dev</title>
-      <link>https://www.example.com/tags/web-dev/</link>
+      <link>https://mltconsecol.github.io/tags/web-dev/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/web-dev/</guid>
+      <guid>https://mltconsecol.github.io/tags/web-dev/</guid>
       <description></description>
     </item>
     
