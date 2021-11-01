@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mapview on Mike Treglia</title>
-    <link>https://mltconsecol.github.io/tags/mapview/</link>
-    <description>Recent content in mapview on Mike Treglia</description>
+    <title>mapview on MikeTreglia</title>
+    <link>https://www.example.com/tags/mapview/</link>
+    <description>Recent content in mapview on MikeTreglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; Michael L. Treglia.&lt;br&gt;All rights reserved.</copyright>
-    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mltconsecol.github.io/tags/mapview/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; Michael L. Treglia&lt;br/&gt;All rights reserved.</copyright>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.example.com/tags/mapview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cherry Blossom Season in NYC</title>
-      <link>https://mltconsecol.github.io/post/20190331_cherryblossomsnyc/</link>
+      <link>https://www.example.com/post/20190331_cherryblossomsnyc/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/post/20190331_cherryblossomsnyc/</guid>
+      <guid>https://www.example.com/post/20190331_cherryblossomsnyc/</guid>
       <description>Cherry BlossomsIt’s springtime in New York and cherry trees are starting to bloom. In fact street trees right outside my house in Staten Island are bright pink in flower right now… here’s a photo I took this morning.
 Google searches will reveal a few places you can go to see cherry trees with festivals dedicated to them and such. But there are lots of cherry trees along streets and in parks of NYC.</description>
     </item>

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blogdown on Mike Treglia</title>
-    <link>https://mltconsecol.github.io/tags/blogdown/</link>
-    <description>Recent content in blogdown on Mike Treglia</description>
+    <title>blogdown on MikeTreglia</title>
+    <link>https://www.example.com/tags/blogdown/</link>
+    <description>Recent content in blogdown on MikeTreglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; Michael L. Treglia.&lt;br&gt;All rights reserved.</copyright>
-    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://mltconsecol.github.io/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; Michael L. Treglia&lt;br/&gt;All rights reserved.</copyright>
+    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.example.com/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Going with Blogdown &amp; Hugo</title>
-      <link>https://mltconsecol.github.io/post/20170123_blogdown_hugo/20170123_blogdown_hugo/</link>
+      <link>https://www.example.com/post/20170123_blogdown_hugo/20170123_blogdown_hugo/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/post/20170123_blogdown_hugo/20170123_blogdown_hugo/</guid>
+      <guid>https://www.example.com/post/20170123_blogdown_hugo/20170123_blogdown_hugo/</guid>
       <description>Why Blogdown? As I&amp;rsquo;ve noted before, my previous website was pretty basic. While it was largely simple to make updates, it wasn&amp;rsquo;t particularly elegant. It was functional, and definitely looked reasonable when it was first created. Editing it wasn&amp;rsquo;t too difficult, but took some forethought if I wanted to make updates across the website. I&amp;rsquo;m not at all trained in web development, and just I picked up a few things by working off a template a friend created for me, and toying around with some .</description>
     </item>
     
     <item>
       <title>Time for a Website Makeover</title>
-      <link>https://mltconsecol.github.io/post/time-for-webpage-update/time-for-webpage-update/</link>
+      <link>https://www.example.com/post/time-for-webpage-update/time-for-webpage-update/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/post/time-for-webpage-update/time-for-webpage-update/</guid>
+      <guid>https://www.example.com/post/time-for-webpage-update/time-for-webpage-update/</guid>
       <description>Time for a Change I got my original website started in the beginning of grad school (circa 2007), with great help from a college friend. As this one, it was static, but relied directly on CSS and HTML, with no real page generator in the sense of Jekyll or Hugo. It&amp;rsquo;s been great for me - serving as a place to link other projects I&amp;rsquo;ve developed; for example, a QGIS tutorial I wrote for a workshop, and materials from a GIS/Spatial Analysis course I taught as a postdoc.</description>
     </item>
     

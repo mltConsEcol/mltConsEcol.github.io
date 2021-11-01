@@ -1,24 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Mike Treglia</title>
-    <link>/tags/hugo/</link>
-    <description>Recent content in Hugo on Mike Treglia</description>
+    <title>hugo on Blackburn Theme Demo</title>
+    <link>https://www.example.com/tags/hugo/</link>
+    <description>Recent content in hugo on Blackburn Theme Demo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 08 Jan 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.example.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Time for Website Makeover</title>
-      <link>/post/time-for-webpage-update/</link>
-      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      <title>Getting Started with Hugo</title>
+      <link>https://www.example.com/post/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/time-for-webpage-update/</guid>
-      <description>Time for a Change I got my original website started in the beginning of grad school (circa 2007), with great help from a college friend. As this one, it was static, but relied directly on CSS and HTML, with no real page generator in the sense of Jekyll or Hugo. It&amp;rsquo;s been great for me - serving as a place to link other projects I&amp;rsquo;ve developed; for example, a QGIS tutorial I wrote for a workshop, and materials from a GIS/Spatial Analysis course I taught as a postdoc.</description>
+      <guid>https://www.example.com/post/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at installing hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
     </item>
     
   </channel>

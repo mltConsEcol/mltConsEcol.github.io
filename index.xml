@@ -1,26 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mike Treglia</title>
-    <link>https://mltconsecol.github.io</link>
-    <description>Recent content on Mike Treglia</description>
+    <title>MikeTreglia</title>
+    <link>https://www.example.com/</link>
+    <description>Recent content on MikeTreglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; Michael L. Treglia.&lt;br&gt;All rights reserved.</copyright>
-    
-        <atom:link href="https://mltconsecol.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>&amp;copy; Michael L. Treglia&lt;br/&gt;All rights reserved.</copyright>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mike Treglia, PhD</title>
-      <link>https://mltconsecol.github.io/</link>
+      <link>https://www.example.com/home/</link>
       <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mltconsecol.github.io/</guid>
-      <description>&lt;p&gt;Welcome to my webpage!&lt;/p&gt;
-&lt;p&gt;My name is Mike Treglia and I work as the Lead Scientist for the Cities program with The Nature Conservancy in New York. In this role I use GIS, Remote Sensing, and statistical tools to characterize the current open space in the city, while thinking about how we can improve the state of biodiversity and develop resilience to climate change. In my work, I leverage vast amounts of open data, and am passionate about developing and sharing open source workflows as possible, in hopes that others will be able to build off of my efforts, without concern for licensing costs.&lt;/p&gt;
-&lt;p&gt;I grew up in Staten Island, NY, and am delighted and privileged to now be working on conservation issues of my entire home city. I am fortunate to have incredible collaborators and partners throughout my work, and incredible mentors throughout my career.&lt;/p&gt;
-&lt;p&gt;I generally try to maintain this website as a place for others to find occasional &lt;a href=&#34;post&#34;&gt;blog posts&lt;/a&gt;, to share a bit about my ongoing and past &lt;a href=&#34;research&#34;&gt;research&lt;/a&gt;, &lt;a href=&#34;code&#34;&gt;code&lt;/a&gt;, and &lt;a href=&#34;teaching&#34;&gt;teaching resources&lt;/a&gt; I&amp;rsquo;ve developed through the years. I hope you find this useful! Feel free to reach out with questions or to connect.&lt;/p&gt;
-</description>
+      <guid>https://www.example.com/home/</guid>
+      <description>Welcome to my webpage!
+My name is Mike Treglia and I work as the Lead Scientist for the Cities program with The Nature Conservancy in New York. In this role I use GIS, Remote Sensing, and statistical tools to characterize the current open space in the city, while thinking about how we can improve the state of biodiversity and develop resilience to climate change. In my work, I leverage vast amounts of open data, and am passionate about developing and sharing open source workflows as possible, in hopes that others will be able to build off of my efforts, without concern for licensing costs.</description>
+    </item>
+    
+    <item>
+      <title>Cherry Blossom Season in NYC</title>
+      <link>https://www.example.com/post/20190331_cherryblossomsnyc/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/post/20190331_cherryblossomsnyc/</guid>
+      <description>Cherry BlossomsIt’s springtime in New York and cherry trees are starting to bloom. In fact street trees right outside my house in Staten Island are bright pink in flower right now… here’s a photo I took this morning.
+Google searches will reveal a few places you can go to see cherry trees with festivals dedicated to them and such. But there are lots of cherry trees along streets and in parks of NYC.</description>
+    </item>
+    
+    <item>
+      <title>Geocoding in NYC from R</title>
+      <link>https://www.example.com/post/20180210_geocodingnyc/</link>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/post/20180210_geocodingnyc/</guid>
+      <description>Edit 12 Feb 2018: Thanks to twitter I learned about being able to call GeoSearch via the rmapzen R package; see the end of this post for more info.
+GeocodingIn GIS and various other fields, Geocoding is a common operation. Not familar with Geocoding? Check out this great definition from Google:
+Geocoding is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.</description>
+    </item>
+    
+    <item>
+      <title>Getting Going with Blogdown &amp; Hugo</title>
+      <link>https://www.example.com/post/20170123_blogdown_hugo/20170123_blogdown_hugo/</link>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/post/20170123_blogdown_hugo/20170123_blogdown_hugo/</guid>
+      <description>Why Blogdown? As I&amp;rsquo;ve noted before, my previous website was pretty basic. While it was largely simple to make updates, it wasn&amp;rsquo;t particularly elegant. It was functional, and definitely looked reasonable when it was first created. Editing it wasn&amp;rsquo;t too difficult, but took some forethought if I wanted to make updates across the website. I&amp;rsquo;m not at all trained in web development, and just I picked up a few things by working off a template a friend created for me, and toying around with some .</description>
+    </item>
+    
+    <item>
+      <title>Time for a Website Makeover</title>
+      <link>https://www.example.com/post/time-for-webpage-update/time-for-webpage-update/</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/post/time-for-webpage-update/time-for-webpage-update/</guid>
+      <description>Time for a Change I got my original website started in the beginning of grad school (circa 2007), with great help from a college friend. As this one, it was static, but relied directly on CSS and HTML, with no real page generator in the sense of Jekyll or Hugo. It&amp;rsquo;s been great for me - serving as a place to link other projects I&amp;rsquo;ve developed; for example, a QGIS tutorial I wrote for a workshop, and materials from a GIS/Spatial Analysis course I taught as a postdoc.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://www.example.com/about/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/about/</guid>
+      <description>A Bit About Me: I work as the Lead Scientist for the Cities program with The Nature Conservancy in New York. In this role I use GIS, Remote Sensing, and statistical tools to characterize dynamics of open space, primarily in New York City. In this work, I look to understand where green space and open space are in various forms (e.g., the urban forest, green roofs), how it is changing through time, who benefits and does not benefit from these resources, and how to maintain and increase them.</description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>https://www.example.com/code/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/code/</guid>
+      <description>Overview iButton Data Organizer NetCDF Data Access LAStools Wrapper Functions from R
+Overview I primarily use R for scientific computing, but also dabble in bash, and use SQL a fair bit for spatial stuff, working from PostgreSQL/PostGIS databases.
+I&amp;rsquo;ll disclaim that I have limited formal training in coding, but have been really fortunate for opportunities to improve my skills through a few opportunities I&amp;rsquo;d encourage others to look into. First, in 2014 I attended a joint NCEAS/RENCI Open Science for Synthesis session, focused in training early career scientists useful computing tools to allow for reproducible research.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://www.example.com/contact/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/contact/</guid>
+      <description>E-mail Work: michael.treglia(at)tnc.org  Personal: mtreglia(at)gmail.com
+Mailing Address Michael Treglia  The Nature Conservancy  322 8th Ave, 14th Floor  New York, NY 10001</description>
+    </item>
+    
+    <item>
+      <title>Photography</title>
+      <link>https://www.example.com/photography/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/photography/</guid>
+      <description>‹›×Photography is a hobby and a passion for me. I try to take my camera on various travels, hikes, and when I get time with my family (especially for photos of the nephew and the dog). Here is a selection of some of my favorites, hosted via the open source blueimp gallery scripts, and feel free to check out my Instagram feed. All photos are presented here copyrighted.</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://www.example.com/research/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/research/</guid>
+      <description>Click here for a list of my peer-reviewed publications Click here for a list of select other works Click here for my complete CV Note: If there are any works for which a PDF is not available but you would like a copy, please email me.
+Current Work My current work is broadly focused on using statistical and and GIS tools to inform conservation efforts. Working for the Cities program with The Nature Conservancy in New York, I use available remote sensing data and GIS datasets to characterize dynamics of open space and green space (e.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://www.example.com/teaching/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/teaching/</guid>
+      <description>QGIS Tutorial QGIS is a well-developed, open source GIS program, with a wide range of features and great compatability with numerous formats. Furthermore, basic installation includes linkages with other open source GIS tools such as GRASS GIS and SAGA (among others). It is one primary software packages that I use in research and teach in classes.
+This tutorial is designed to familiarize GIS users with the general layout, features and tools of QGIS, through working with sample datasets that are provided.</description>
     </item>
     
   </channel>
